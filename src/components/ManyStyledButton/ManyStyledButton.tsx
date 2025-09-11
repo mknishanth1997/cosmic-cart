@@ -35,3 +35,9 @@ function colorHelper(variant: Variant = "primary") {
   };
   return v[variant];
 }
+
+{
+  /* <ManyStyledButton variant="primary" onClick={() => console.log("clicked")}>
+  Button
+</ManyStyledButton>; */
+}

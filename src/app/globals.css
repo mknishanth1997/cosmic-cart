@@ -102,6 +102,6 @@ li {
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
   /* Gradient Colors */
-  --button1-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --button1-gradient: linear-gradient(135deg, #fd63a3 0%, #fc3d03 100%);
   --button1-accent-color: #f5576c;
 }
