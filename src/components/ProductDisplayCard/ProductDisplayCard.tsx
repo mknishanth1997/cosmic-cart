@@ -15,7 +15,7 @@ export function ProductDisplayCard() {
       <div className={styles.imgContainer}>
         <Image
           className={styles.planetThumbnailImg}
-          src="/planet/planet1.webp"
+          src="/planet/planet14.webp"
           alt="Planet"
           width={250}
           height={250}
