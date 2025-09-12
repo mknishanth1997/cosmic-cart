@@ -1,0 +1,146 @@
+/* Card Container */
+.productDisplayCardContainer {
+  max-width: 320px;
+  width: 100%;
+  padding: 16px;
+  background-color: #e5e7eb;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+/* Image Container */
+.imgContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3; /* maintains square */
+  border-radius: 16px;
+  overflow: hidden;
+  background: url(https://t4.ftcdn.net/jpg/00/59/95/89/360_F_59958917_1SvEPqvKnrGr68THJ35hqQUiHwQ6WhCN.jpg)
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.planetThumbnailImg {
+  object-fit: cover;
+  width: 90%;
+  height: 90%;
+  transition: transform 0.3s ease;
+}
+
+.planetThumbnailImg:hover {
+  transform: scale(1.1);
+}
+
+/* Overlay */
+.imageOverlay {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.overlayButton {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 9999px;
+  padding: 0.35rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.overlayButton:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+/* Discount badge */
+.discountBadge {
+  background-color: #fee2e2; /* red-100 */
+  color: #b91c1c; /* red-800 */
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Text Area */
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.titleAndDescription > h3 {
+  margin-bottom: 6px;
+  font-size: clamp(1rem, 4vw, 1.25rem);
+  font-weight: 600;
+}
+
+.titleAndDescription > p {
+  color: #6b7280;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Price & Stock */
+.priceAndAvailability {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceAndAvailability span {
+  background-color: #dcfce7; /* green-100 */
+  color: #166534; /* green-800 */
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap; /* wraps on small screens */
+}
+
+.speedDialWrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 400px) {
+  .productDisplayCardContainer {
+    padding: 12px;
+  }
+
+  .titleAndDescription > h3 {
+    font-size: 1rem;
+  }
+
+  .actionButtons {
+    gap: 8px;
+  }
+
+  .discountBadge,
+  .priceAndAvailability span {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+}

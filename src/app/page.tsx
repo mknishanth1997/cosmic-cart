@@ -1,11 +1,12 @@
 "use client";
 import ManyStyledButton from "@/components/ManyStyledButton/ManyStyledButton";
 import "./page.module.css";
+import { ProductDisplayCard } from "@/components/ProductDisplayCard/ProductDisplayCard";
 
 export default function Home() {
   return (
     <>
-      {" "}
+      {/* {" "}
       <ManyStyledButton
         variant="primary"
         onClick={() => console.log("clicked")}
@@ -19,7 +20,9 @@ export default function Home() {
       </p>
       <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">
         Green
-      </span>
+      </span> */}
+
+      <ProductDisplayCard></ProductDisplayCard>
     </>
   );
 }
