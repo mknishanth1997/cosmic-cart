@@ -46,7 +46,7 @@ export default function ShareSpeedDial() {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex items-center justify-center text-white  bg-red-700 rounded-lg w-[52px] h-[43px] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
+        className="flex items-center justify-center text-white bg-gray-700 rounded-lg w-[52px] h-[43px] hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 focus:outline-none"
       >
         <svg
           className={`w-5 h-5 transition-transform duration-300 ${

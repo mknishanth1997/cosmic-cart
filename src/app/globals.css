@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
 
 /* Css Style Sheet Reset */
 /* 1. Use a more-intuitive box-sizing model */
@@ -103,8 +105,8 @@ li {
   --spacing-lg: 1.5rem;
 
   /* Gradient Colors */
-  --button1-gradient: linear-gradient(135deg, #fd63a3 0%, #fc3d03 100%);
-  --button1-accent-color: #f5576c;
+  --button1-gradient: linear-gradient(to right, #10b981, #06b6d4);
+  --button1-accent-color: #d1d5db;
 
   /* Font sizes */
   --fs-h1: 2.5rem; /* 40px */

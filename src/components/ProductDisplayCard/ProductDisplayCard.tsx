@@ -1,3 +1,5 @@
+"use client";
+import { Button, Tooltip } from "flowbite-react";
 import ManyStyledButton from "../ManyStyledButton/ManyStyledButton";
 import styles from "./ProductDisplayCard.module.css";
 import { FaCartArrowDown } from "react-icons/fa";
@@ -8,7 +10,6 @@ import ShareSpeedDial from "@/Library/flow-bite/SpeedDial/ShareSpeedDial";
 
 export function ProductDisplayCard() {
   const [wishList, setWishList] = useState<boolean>(false);
-
   return (
     <div className={styles.productDisplayCardContainer}>
       {/* Image Container */}
@@ -25,12 +26,16 @@ export function ProductDisplayCard() {
           <span className="bg-red-700 text-white text-sm font-medium px-2 py-0.5 rounded-sm">
             50% off
           </span>
-          <button
-            onClick={() => setWishList(!wishList)}
-            className={styles.overlayButton}
-          >
-            <FaHeart color={wishList ? "red" : "gray"} size={18} />
-          </button>
+          <Tooltip content="Add to Wishlist">
+            {" "}
+            <button
+              onClick={() => setWishList(!wishList)}
+              className={styles.overlayButton}
+            >
+              {""}
+              <FaHeart color={wishList ? "red" : "gray"} size={18} />
+            </button>
+          </Tooltip>
         </div>
       </div>
 
@@ -52,15 +57,23 @@ export function ProductDisplayCard() {
         </div>
 
         <div className={styles.actionButtons}>
-          <ManyStyledButton variant="primary" size="md">
-            Buy Now
-          </ManyStyledButton>
+          <Tooltip content="Purchase the Planet">
+            {" "}
+            <ManyStyledButton variant="primary" size="md">
+              Buy Now
+            </ManyStyledButton>
+          </Tooltip>
 
-          <ManyStyledButton
-            variant="secondary"
-            size="md"
-            Icon={FaCartArrowDown}
-          />
+          <Tooltip content="Add to Cart">
+            {" "}
+            <ManyStyledButton
+              variant="secondary"
+              size="md"
+              Icon={FaCartArrowDown}
+            >
+              {""}
+            </ManyStyledButton>
+          </Tooltip>
 
           <div className={styles.speedDialWrapper}>
             <ShareSpeedDial />

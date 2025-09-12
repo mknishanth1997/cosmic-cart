@@ -34,6 +34,7 @@
   color: var(--button1-accent-color);
   background-color: transparent;
   font-weight: bolder;
+  background: white;
 }
 
 .link {
