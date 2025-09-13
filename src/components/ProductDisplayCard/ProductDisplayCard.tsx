@@ -10,6 +10,7 @@ import ShareSpeedDial from "@/Library/flow-bite/SpeedDial/ShareSpeedDial";
 import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import { extractBlogsKeys } from "@/Data/blogsRawData";
+import { useData } from "@/context/dataContext";
 
 // Component
 export function ProductDisplayCard({
@@ -21,8 +22,31 @@ export function ProductDisplayCard({
   planetAvailabilty,
   planetId,
 }) {
+  const { cosmicShop, saveCosmicCart } = useData();
   // Handle Wishlisht
-  function handleAddWishList() {}
+  // check if this planet is in wishlist
+  const isInWishList = cosmicShop.wishListItems.some(
+    (item) => item.planetId === planetId
+  );
+
+  function handleAddWishList() {
+    let updatedWishlist;
+    if (isInWishList) {
+      updatedWishlist = cosmicShop.wishListItems.filter(
+        (item) => item.planetId !== planetId
+      );
+    } else {
+      updatedWishlist = [
+        ...cosmicShop.wishListItems,
+        { planetId, addedAt: new Date() },
+      ];
+    }
+
+    saveCosmicCart({
+      ...cosmicShop,
+      wishListItems: updatedWishlist,
+    });
+  }
   const [wishList, setWishList] = useState<boolean>(false);
   // Toast Message
   const notify = (t: string) => toast.success(t);
@@ -52,15 +76,22 @@ export function ProductDisplayCard({
             {" "}
             <button
               onClick={() => {
-                setWishList(!wishList);
-                wishList
-                  ? notify("Item removed from the Wishlist")
-                  : notify("Item added to the Wishlist");
+                handleAddWishList(); // your existing toggle logic
+                toast(
+                  isInWishList
+                    ? "Removed from Wishlist 💔"
+                    : "Added to Wishlist ❤️"
+                );
               }}
-              className={styles.overlayButton}
+              className={`${styles.overlayButton} transition-transform duration-300 
+    hover:scale-125 active:scale-95`}
             >
-              {""}
-              <FaHeart color={wishList ? "red" : "gray"} size={18} />
+              <FaHeart
+                size={18}
+                className={`transition-colors duration-300 ${
+                  isInWishList ? "text-red-500" : "text-gray-400"
+                }`}
+              />
             </button>
           </Tooltip>
         </div>
