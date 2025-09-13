@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Orbitron, Nunito } from "next/font/google";
 import "flowbite";
+import { ClientLayout } from "@/components/ClientLayout";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -41,7 +42,8 @@ export default function RootLayout({
       <body
         className={`${orbitron.variable} ${nunito.variable} ${geistSans.variable} ${geistMono.variable}`}
       >
-        {children}
+        {/* Client-side state handling goes here */}
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

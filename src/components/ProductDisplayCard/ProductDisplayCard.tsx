@@ -7,9 +7,13 @@ import Image from "next/image";
 import { FaHeart } from "react-icons/fa6";
 import { useState } from "react";
 import ShareSpeedDial from "@/Library/flow-bite/SpeedDial/ShareSpeedDial";
-
+import toast, { Toaster } from "react-hot-toast";
+import Link from "next/link";
+import { extractBlogsKeys } from "@/Data/blogsRawData";
 export function ProductDisplayCard() {
   const [wishList, setWishList] = useState<boolean>(false);
+  // Toast Message
+  const notify = (t: string) => toast.success(t);
   return (
     <div className={styles.productDisplayCardContainer}>
       {/* Image Container */}
@@ -29,7 +33,12 @@ export function ProductDisplayCard() {
           <Tooltip content="Add to Wishlist">
             {" "}
             <button
-              onClick={() => setWishList(!wishList)}
+              onClick={() => {
+                setWishList(!wishList);
+                wishList
+                  ? notify("Item removed from the Wishlist")
+                  : notify("Item added to the Wishlist");
+              }}
               className={styles.overlayButton}
             >
               {""}
@@ -70,9 +79,11 @@ export function ProductDisplayCard() {
               variant="secondary"
               size="md"
               Icon={FaCartArrowDown}
+              onClick={() => notify("Item added to the cart")}
             >
               {""}
             </ManyStyledButton>
+            <Toaster />
           </Tooltip>
 
           <div className={styles.speedDialWrapper}>
@@ -80,6 +91,15 @@ export function ProductDisplayCard() {
           </div>
         </div>
       </div>
+      {extractBlogsKeys().map((key) => (
+        <Link
+          className="text-blue-500 underline"
+          key={key}
+          href={`blogs/${key}`}
+        >
+          {key}
+        </Link>
+      ))}
     </div>
   );
 }
