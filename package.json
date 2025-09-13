@@ -16,6 +16,7 @@
     "@popperjs/core": "^2.11.8",
     "flowbite": "^3.1.2",
     "flowbite-react": "^0.12.9",
+    "keen-slider": "^6.8.6",
     "next": "15.5.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",

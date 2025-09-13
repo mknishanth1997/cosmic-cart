@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Orbitron, Nunito } from "next/font/google";
-import "flowbite";
 import { ClientLayout } from "@/components/ClientLayout";
+import "flowbite/dist/flowbite.css";
+import "keen-slider/keen-slider.min.css";
 
 const orbitron = Orbitron({
   subsets: ["latin"],

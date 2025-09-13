@@ -25,6 +25,7 @@ export function ProductDisplayCard() {
           width={250}
           height={250}
         />
+
         {/* Overlay */}
         <div className={styles.imageOverlay}>
           <span className="bg-red-700 text-white text-sm font-medium px-2 py-0.5 rounded-sm">
@@ -91,15 +92,6 @@ export function ProductDisplayCard() {
           </div>
         </div>
       </div>
-      {extractBlogsKeys().map((key) => (
-        <Link
-          className="text-blue-500 underline"
-          key={key}
-          href={`blogs/${key}`}
-        >
-          {key}
-        </Link>
-      ))}
     </div>
   );
 }

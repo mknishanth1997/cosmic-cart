@@ -11,14 +11,21 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex">
       {/* Sidebar */}
-      <SidebarFlowBite isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <SidebarFlowBite
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        className="z-30" // ensures it is above headers
+      />
 
-      <div className="flex-1 flex flex-col">
-        {/* Header with hamburger */}
-        <Header onToggle={() => setIsOpen((prev) => !prev)} />
-        <SecondaryHeader /> {/* put directly below main header */}
-        <main className="p-4">{children}</main>
+      <div className="flex-1 flex flex-col relative z-0">
+        {/* Sticky headers */}
+        <div className="sticky top-0 z-20 flex flex-col">
+          <Header onToggle={() => setIsOpen((prev) => !prev)} />
+          <SecondaryHeader />
+        </div>
+
         {/* Page content */}
+        <main className="p-4">{children}</main>
       </div>
     </div>
   );
