@@ -1,0 +1,25 @@
+.homePageContainer {
+  background: linear-gradient(90deg, #0f0c29 0%, #24243e 50%, #302b63 100%);
+}
+
+.ProductCardDispalyPage {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    minmax(250px, 320px)
+  ); /* 4 cards per row max */
+  gap: 20px 30px; /* vertical, horizontal */
+  padding: 40px 20px;
+  justify-content: center; /* center the grid */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 480px) {
+  .ProductCardDispalyPage {
+    grid-template-columns: 1fr; /* one card per row */
+    justify-items: center; /* keep it centered */
+    gap: 20px; /* smaller gap for mobile */
+  }
+}

@@ -5,6 +5,7 @@ import { Orbitron, Nunito } from "next/font/google";
 import { ClientLayout } from "@/components/ClientLayout";
 import "flowbite/dist/flowbite.css";
 import "keen-slider/keen-slider.min.css";
+import { DataProvider } from "@/context/dataContext";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -43,8 +44,10 @@ export default function RootLayout({
       <body
         className={`${orbitron.variable} ${nunito.variable} ${geistSans.variable} ${geistMono.variable}`}
       >
-        {/* Client-side state handling goes here */}
-        <ClientLayout>{children}</ClientLayout>
+        {/* Wrap ClientLayout with DataProvider */}
+        <DataProvider>
+          <ClientLayout>{children}</ClientLayout>
+        </DataProvider>
       </body>
     </html>
   );

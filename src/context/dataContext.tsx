@@ -1,3 +1,4 @@
+"use client";
 import { planetData } from "@/Data/planetData";
 import { CosmicCart, Planets } from "@/types/types";
 import { ReactNode, useContext, useEffect, useState } from "react";

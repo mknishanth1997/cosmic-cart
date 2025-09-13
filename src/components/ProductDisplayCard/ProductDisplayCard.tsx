@@ -10,7 +10,16 @@ import ShareSpeedDial from "@/Library/flow-bite/SpeedDial/ShareSpeedDial";
 import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import { extractBlogsKeys } from "@/Data/blogsRawData";
-export function ProductDisplayCard() {
+
+// Component
+export function ProductDisplayCard({
+  planetThumbnailImg,
+  planetOffer,
+  planetName,
+  planetDescription,
+  planetPrice,
+  planetAvailabilty,
+}) {
   const [wishList, setWishList] = useState<boolean>(false);
   // Toast Message
   const notify = (t: string) => toast.success(t);
@@ -20,7 +29,7 @@ export function ProductDisplayCard() {
       <div className={styles.imgContainer}>
         <Image
           className={styles.planetThumbnailImg}
-          src="/planet/planet14.webp"
+          src={planetThumbnailImg}
           alt="Planet"
           width={250}
           height={250}
@@ -28,8 +37,12 @@ export function ProductDisplayCard() {
 
         {/* Overlay */}
         <div className={styles.imageOverlay}>
-          <span className="bg-red-700 text-white text-sm font-medium px-2 py-0.5 rounded-sm">
-            50% off
+          <span
+            className={`bg-red-700 text-white text-sm font-medium px-2 py-0.5 rounded-sm ${
+              planetOffer.hasOffer ? "visible" : "invisible"
+            }`}
+          >
+            {`${planetOffer.offerPrice}% Off`}
           </span>
           <Tooltip content="Add to Wishlist">
             {" "}
@@ -52,17 +65,22 @@ export function ProductDisplayCard() {
       {/* Text Container */}
       <div className={styles.descriptionContainer}>
         <div className={styles.titleAndDescription}>
-          <h3 className={styles.planetHeaderText}>Kepler-442b</h3>
-          <p>
-            This is the planet we call home. Our resilience will protect us, and
-            our intelligence will propel us.
-          </p>
+          <h3 className={styles.planetHeaderText}>{planetName}</h3>
+          <p>{planetDescription}</p>
         </div>
 
         <div className={styles.priceAndAvailability}>
-          <h4 className="price">₹15,000</h4>
-          <span className="bg-green-100 text-green-800 text-sm font-medium px-2 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">
-            In Stock
+          <h4 className="price">{`Rs ${planetPrice}`}</h4>
+          <span
+            className={`text-sm font-medium px-2 py-0.5 rounded-sm
+    ${
+      planetAvailabilty
+        ? "bg-green-100 text-green-800"
+        : "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"
+    }
+  `}
+          >
+            {planetAvailabilty ? "In Stock" : "Out of Stock"}
           </span>
         </div>
 

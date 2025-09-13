@@ -113,8 +113,6 @@
 }
 
 .priceAndAvailability span {
-  background-color: #dcfce7; /* green-100 */
-  color: #166534; /* green-800 */
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
