@@ -19,6 +19,7 @@ export function ProductCardDisplayPage() {
               planetDescription={planet.planetShortDescription}
               planetPrice={planet.planetPrice}
               planetAvailabilty={planet.planetInStock}
+              planetId={planet.planetId}
             ></ProductDisplayCard>
           ))}
         </div>

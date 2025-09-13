@@ -19,10 +19,14 @@ export function ProductDisplayCard({
   planetDescription,
   planetPrice,
   planetAvailabilty,
+  planetId,
 }) {
+  // Handle Wishlisht
+  function handleAddWishList() {}
   const [wishList, setWishList] = useState<boolean>(false);
   // Toast Message
   const notify = (t: string) => toast.success(t);
+  const planetIdeintification = planetId;
   return (
     <div className={styles.productDisplayCardContainer}>
       {/* Image Container */}
