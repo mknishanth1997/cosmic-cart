@@ -11,6 +11,7 @@ import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import { extractBlogsKeys } from "@/Data/blogsRawData";
 import { useData } from "@/context/dataContext";
+import ProductCarousel from "@/productDescriptionPageComponent/firstPart/ImageProductCarosel.";
 
 // Component
 export function ProductDisplayCard({
@@ -26,6 +27,10 @@ export function ProductDisplayCard({
   // Handle Wishlisht
   // check if this planet is in wishlist
   const isInWishList = cosmicShop.wishListItems.some(
+    (item) => item.planetId === planetId
+  );
+
+  const isINShoppingCart = cosmicShop.cartItems.some(
     (item) => item.planetId === planetId
   );
 
@@ -45,6 +50,25 @@ export function ProductDisplayCard({
     saveCosmicCart({
       ...cosmicShop,
       wishListItems: updatedWishlist,
+    });
+  }
+
+  // Shopping Cart
+  function handleAddShoppingCart() {
+    let updatedShoppingCart;
+    if (isINShoppingCart) {
+      updatedShoppingCart = cosmicShop.cartItems.filter(
+        (item) => item.planetId !== planetId
+      );
+    } else {
+      updatedShoppingCart = [
+        ...cosmicShop.cartItems,
+        { planetId, priceAtTime: planetPrice, addedAt: new Date() },
+      ];
+    }
+    saveCosmicCart({
+      ...cosmicShop,
+      cartItems: updatedShoppingCart,
     });
   }
   const [wishList, setWishList] = useState<boolean>(false);
@@ -92,6 +116,7 @@ export function ProductDisplayCard({
                   isInWishList ? "text-red-500" : "text-gray-400"
                 }`}
               />
+              {""}
             </button>
           </Tooltip>
         </div>
@@ -133,7 +158,10 @@ export function ProductDisplayCard({
               variant="secondary"
               size="md"
               Icon={FaCartArrowDown}
-              onClick={() => notify("Item added to the cart")}
+              onClick={() => {
+                handleAddShoppingCart();
+                notify("Item added to the cart");
+              }}
             >
               {""}
             </ManyStyledButton>
@@ -143,6 +171,7 @@ export function ProductDisplayCard({
           <div className={styles.speedDialWrapper}>
             <ShareSpeedDial />
           </div>
+          <ProductCarousel></ProductCarousel>
         </div>
       </div>
     </div>

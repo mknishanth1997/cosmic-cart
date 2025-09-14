@@ -1,0 +1,33 @@
+.imgContainer {
+  padding: 24px;
+  text-align: center;
+  width: fit-content;
+  max-width: 100%; /* don’t overflow on mobile */
+  background: linear-gradient(to right, #581c87, #831843);
+  border-radius: 24px;
+}
+
+.imgContainer img {
+  max-width: 100%; /* image shrinks on small screens */
+  height: auto;
+  border-radius: 12px;
+}
+
+.imgContainer > h3 {
+  padding-top: 16px;
+  font-size: 1.25rem; /* default ~20px */
+  color: white;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 640px) {
+  .imgContainer {
+    padding: 12px; /* tighter padding */
+    border-radius: 16px;
+  }
+
+  .imgContainer > h3 {
+    font-size: 1rem; /* ~16px */
+    padding-top: 8px;
+  }
+}

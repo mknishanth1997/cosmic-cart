@@ -24,6 +24,8 @@ export type PlanetDetails = {
   planetName: string;
   planetPrice: number;
   planetShortDescription: string;
+  planetTitleDescription: string;
+  planetInnterDescription: string;
   planetRarity: string;
   planetOfferDetails: {
     hasOffer: boolean;

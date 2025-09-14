@@ -7,6 +7,8 @@ export const planetData: Planets = [
     planetPrice: 15000,
     planetShortDescription:
       "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+    planetTitleDescription: "Not just a planet, a new begining",
+    planetInnterDescription: "lorem",
     planetRarity: "Rare",
     planetOfferDetails: {
       hasOffer: true,

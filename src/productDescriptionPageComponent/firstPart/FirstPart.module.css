@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* Left (Carousel) */
+.leftPart {
+  align-self: center;
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    rgba(88, 28, 135, 0.3) 0%,
+    rgba(131, 24, 67, 0.3) 100%
+  );
+  border-radius: 24px;
+  padding: 0.5rem; /* keeps image from touching edges */
+}
+
+/* Right (Text) */
+.rightPart {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(
+    to right,
+    rgba(88, 28, 135, 0.3) 20%,
+    rgba(131, 24, 67, 0.3) 100%
+  );
+  border-radius: 24px;
+}
+
+/* Desktop text styles */
+.rightPart h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+.rightPart h6 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.rightPart p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.rightPart .buttonGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ✅ Mobile view */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* stack */
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .leftPart,
+  .rightPart {
+    max-width: 100%; /* take full width */
+    width: 100%;
+  }
+
+  .leftPart {
+    padding: 0; /* let carousel breathe */
+  }
+
+  .rightPart {
+    padding: 0.75rem;
+  }
+
+  .rightPart h1 {
+    font-size: 1.75rem; /* shrink heading */
+  }
+
+  .rightPart h6 {
+    font-size: 1rem;
+  }
+
+  .rightPart p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
