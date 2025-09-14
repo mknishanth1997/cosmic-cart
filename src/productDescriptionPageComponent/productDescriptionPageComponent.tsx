@@ -3,13 +3,17 @@ import FirstPart from "./firstPart/FirstPart";
 import SecondPart from "./secondPart/SecondPart";
 import ImageHolderWithTitle from "@/components/ImageHolderWithTitle/ImageHolderWithTitle";
 import ThirdPart from "./thridPart/ThirdPart";
+import ProductCard from "@/components/productCardDummyHardCoded/ProductCard";
+import styles from "./productDescriptionPageComponent.module.css";
+import FourthPart from "@/ProductCardDispalyPage/fourthPart/FourthPart";
 
 export default function ProductDescriptionPageComponent() {
   return (
-    <div>
+    <div className={styles.container}>
       <FirstPart></FirstPart>
       <SecondPart></SecondPart>
       <ThirdPart />
+      <FourthPart></FourthPart>
     </div>
   );
 }
