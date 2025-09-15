@@ -6,6 +6,7 @@ import ThirdPart from "./thridPart/ThirdPart";
 import ProductCard from "@/components/productCardDummyHardCoded/ProductCard";
 import styles from "./productDescriptionPageComponent.module.css";
 import FourthPart from "@/ProductCardDispalyPage/fourthPart/FourthPart";
+import SixthPart from "./sixthPart/SixthPart";
 
 export default function ProductDescriptionPageComponent() {
   return (
@@ -14,6 +15,7 @@ export default function ProductDescriptionPageComponent() {
       <SecondPart></SecondPart>
       <ThirdPart />
       <FourthPart></FourthPart>
+      <SixthPart></SixthPart>
     </div>
   );
 }

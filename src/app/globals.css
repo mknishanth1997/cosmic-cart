@@ -108,6 +108,11 @@ li {
   /* Gradient Colors */
   --button1-gradient: linear-gradient(to right, #10b981, #06b6d4);
   --button1-accent-color: #d1d5db;
+  --opacity-card-gradient: linear-gradient(
+    to right,
+    rgba(88, 28, 135, 0.3) 0%,
+    rgba(131, 24, 67, 0.3) 100%
+  );
 
   /* Font sizes */
   --fs-h1: 2.5rem; /* 40px */

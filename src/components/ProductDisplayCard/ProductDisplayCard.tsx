@@ -171,7 +171,6 @@ export function ProductDisplayCard({
           <div className={styles.speedDialWrapper}>
             <ShareSpeedDial />
           </div>
-          <ProductCarousel></ProductCarousel>
         </div>
       </div>
     </div>

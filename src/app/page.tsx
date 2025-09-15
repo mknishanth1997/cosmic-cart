@@ -9,7 +9,7 @@ import ProductDescriptionPageComponent from "@/productDescriptionPageComponent/p
 export default function Home() {
   return (
     <>
-      {/* <ProductCardDisplayPage></ProductCardDisplayPage> */}
+      <ProductCardDisplayPage></ProductCardDisplayPage>
       <ProductDescriptionPageComponent></ProductDescriptionPageComponent>
     </>
   );
