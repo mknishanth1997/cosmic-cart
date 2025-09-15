@@ -12,7 +12,7 @@ export default function ThirdPart() {
     <div className="flex gap-5 justify-center p-16 flex-wrap">
       {" "}
       {imgUrl.map((img) => (
-        <ImageHolderWithTitle url={img}></ImageHolderWithTitle>
+        <ImageHolderWithTitle key={img} url={img}></ImageHolderWithTitle>
       ))}
     </div>
   );

@@ -15,7 +15,7 @@ export const planetData: Planets = [
       offerPrice: 90,
     },
     planetInStock: true,
-    planetThumbnailImg: "/planet/planet14.webp",
+    planetThumbnailImg: "/planet/planet1.webp",
     planetDescription: {
       paragraphs: [
         "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",

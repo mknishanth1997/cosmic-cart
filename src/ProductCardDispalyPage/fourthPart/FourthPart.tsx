@@ -8,8 +8,6 @@ export default function FourthPart() {
       <ProductCard></ProductCard>
       <ProductCard></ProductCard>
       <ProductCard></ProductCard>
-      <img src="/WEB BANNER 12.png" alt="" />
-      <img src="/WEB BANNER 41.png" alt="" />
     </div>
   );
 }

@@ -32,6 +32,10 @@ export function SecondaryHeader() {
             {key}
           </Link>
         ))}
+
+        <Link href="/productDescriptionPage/1">
+          <span>hikjdsf</span>
+        </Link>
       </div>
 
       {/* Dismiss button */}

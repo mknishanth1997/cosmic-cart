@@ -25,7 +25,7 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
         </div>
 
         {/* Page content */}
-        <main className="p-4">{children}</main>
+        <main>{children}</main>
       </div>
     </div>
   );

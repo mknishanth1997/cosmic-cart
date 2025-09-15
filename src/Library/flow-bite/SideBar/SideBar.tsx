@@ -44,8 +44,8 @@ export function SidebarFlowBite({
 
       <SidebarItems>
         <SidebarItemGroup>
-          <SidebarItem href="#" icon={HiChartPie}>
-            Dashboard
+          <SidebarItem href="/" icon={HiChartPie}>
+            Home Page
           </SidebarItem>
           <SidebarItem href="#" icon={HiViewBoards}>
             Kanban
