@@ -1,13 +1,19 @@
+"use client";
 import ProductCard from "@/components/productCardDummyHardCoded/ProductCard";
 import React from "react";
 import Image from "next/image";
-export default function FourthPart() {
+import { useData } from "@/context/dataContext";
+export default function FourthPart({ id }) {
+  const { cosmicShop, saveCosmicCart, allPlanetData } = useData();
+  console.log(typeof id);
+  const planet = allPlanetData.find((planet) => planet.planetId === id);
+  const pab = planet?.peopleAlsoBought;
+  console.log({ pab });
   return (
     <div className="flex  w-full justify-center gap-16 flex-wrap ">
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
+      {pab?.map((t) => (
+        <ProductCard key={t.productName} thing={t}></ProductCard>
+      ))}
     </div>
   );
 }

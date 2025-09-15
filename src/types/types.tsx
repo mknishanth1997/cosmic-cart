@@ -18,7 +18,10 @@ export type CosmicCart = {
     date: Date;
   }[];
 };
-
+type a = {
+  title: string;
+  para: string;
+};
 export type PlanetDetails = {
   planetId: number;
   planetName: string;
@@ -38,6 +41,7 @@ export type PlanetDetails = {
   planetDescription: {
     paragraphs: string[];
     bulletPoints: string[];
+    detailedDescription: a[];
     images: object[];
     surfacePreviewImages: string[];
   };

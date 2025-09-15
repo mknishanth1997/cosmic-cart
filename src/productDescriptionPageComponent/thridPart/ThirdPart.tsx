@@ -1,4 +1,6 @@
+"use client";
 import ImageHolderWithTitle from "@/components/ImageHolderWithTitle/ImageHolderWithTitle";
+import { useData } from "@/context/dataContext";
 import React from "react";
 
 const imgUrl = [
@@ -7,12 +9,21 @@ const imgUrl = [
   "/surfacePreview/surfacePreview3.webp",
 ];
 
-export default function ThirdPart() {
+const title = ["Future Colonies", "Surface Preview", "Local Wildlife"];
+
+export default function ThirdPart({ id }) {
+  const { cosmicShop, saveCosmicCart, allPlanetData } = useData();
+  console.log(typeof id);
+  const planet = allPlanetData.find((planet) => planet.planetId === id);
   return (
     <div className="flex gap-5 justify-center p-16 flex-wrap">
       {" "}
-      {imgUrl.map((img) => (
-        <ImageHolderWithTitle key={img} url={img}></ImageHolderWithTitle>
+      {planet?.planetDescription.surfacePreviewImages.map((img, index) => (
+        <ImageHolderWithTitle
+          key={img}
+          url={img}
+          title={title[index]}
+        ></ImageHolderWithTitle>
       ))}
     </div>
   );

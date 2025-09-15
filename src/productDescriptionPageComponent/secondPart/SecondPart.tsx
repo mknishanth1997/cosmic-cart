@@ -1,6 +1,11 @@
+"use client";
+import { useData } from "@/context/dataContext";
 import { Thermometer, Sun, Globe } from "lucide-react";
 
-export default function SecondPart() {
+export default function SecondPart({ id }) {
+  const { cosmicShop, saveCosmicCart, allPlanetData } = useData();
+  console.log(typeof id);
+  const planet = allPlanetData.find((planet) => planet.planetId === id);
   return (
     <div className="flex justify-center ">
       <div className="w-[80%] p-4 sm:p-6 md:p-10 rounded-3xl shadow-lg backdrop-blur-sm bg-transparent bg-[linear-gradient(to_right,rgba(88,28,135,0.3)_0%,rgba(131,24,67,0.3)_100%)]">
@@ -8,16 +13,12 @@ export default function SecondPart() {
           {/* Left side: Why Choose This Planet */}
           <div className="flex flex-col gap-6 text-white text-center md:text-left md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
-              Why Choose Keplere-442b?
+              {`Why Choose ${planet?.planetName}?`}
             </h2>
             <ul className="list-disc list-inside text-base md:text-lg space-y-3 font-medium text-white ">
-              <li>Safe from boring earth problems</li>
-              <li>Zero traffic jams guaranteed</li>
-              <li>Unlimited starry night views</li>
-              <li>Free alien sightseeing</li>
-              <li>Perfect for introverts and explorers</li>
-              <li>Free Wi-Fi… sometimes</li>
-              <li>Lifetime bragging rights</li>
+              {planet?.planetDescription.bulletPoints.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
             </ul>
           </div>
           {/* Right side: Specifications Card */}

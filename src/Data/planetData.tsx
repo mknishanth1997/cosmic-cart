@@ -30,6 +30,20 @@ export const planetData: Planets = [
         "Known for: The Great Luminescent Forest and the Whisperfalls.",
         "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
       ],
+      detailedDescription: [
+        {
+          title: "Heading",
+          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+        },
+        {
+          title: "Heading",
+          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+        },
+        {
+          title: "Heading",
+          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+        },
+      ],
       images: [
         {
           url: "/test.jpg",
@@ -42,16 +56,17 @@ export const planetData: Planets = [
         { url: "/DG_FomMXoAA4OSI.jpeg" },
       ],
       surfacePreviewImages: [
-        "https://example.com/images/kepler442b_surface1.jpg",
-        "https://example.com/images/kepler442b_surface2.jpg",
+        "/surfacePreview/surfacePreview1.webp",
+        "/surfacePreview/surfacePreview2.webp",
+        "/surfacePreview/surfacePreview3.webp",
       ],
     },
     planetGallery: [
-      "https://example.com/images/kepler442b_gallery1.jpg",
-      "https://example.com/images/kepler442b_gallery2.jpg",
-      "https://example.com/images/kepler442b_gallery3.jpg",
-      "https://example.com/images/kepler442b_gallery4.jpg",
-      "https://example.com/images/kepler442b_gallery5.jpg",
+      "/WEB BANNER 41.png",
+      "/WEB BANNER 41.png",
+      "/WEB BANNER 41.png",
+      "/WEB BANNER 41.png",
+      "/WEB BANNER 41.png",
     ],
     peopleAlsoBought: [
       {
@@ -59,14 +74,14 @@ export const planetData: Planets = [
         productDescription:
           "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
         productPrice: 750.0,
-        productImg: "https://example.com/images/scanner_module.jpg",
+        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
       },
       {
         productName: "Terraforming Kit (Basic)",
         productDescription:
           "Start the process of making a hostile planet more hospitable with this starter kit.",
         productPrice: 15000.0,
-        productImg: "https://example.com/images/terraforming_kit.jpg",
+        productImg: "/test.jpg",
       },
     ],
   },

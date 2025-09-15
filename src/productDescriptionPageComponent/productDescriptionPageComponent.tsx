@@ -11,14 +11,15 @@ import FifthPart from "./fifthPart/FifthPart";
 
 export default function ProductDescriptionPageComponent({ id }) {
   console.log({ id });
+  const ID = Number(id);
   return (
     <div className={styles.container}>
       <FirstPart id={id}></FirstPart>
-      <SecondPart></SecondPart>
-      <ThirdPart />
-      <FifthPart></FifthPart>
-      <FourthPart></FourthPart>
-      <SixthPart></SixthPart>
+      <SecondPart id={ID}></SecondPart>
+      <ThirdPart id={ID} />
+      <FourthPart id={ID}></FourthPart>
+      <SixthPart id={ID}></SixthPart>
+      <FifthPart id={ID}></FifthPart>
     </div>
   );
 }
