@@ -3,9 +3,12 @@ import React from "react";
 
 export default function productDescriptionPage({ params }) {
   const { id } = React.use(params);
+  console.log(id);
   return (
     <div>
-      <ProductDescriptionPageComponent></ProductDescriptionPageComponent>
+      <ProductDescriptionPageComponent
+        id={id}
+      ></ProductDescriptionPageComponent>
     </div>
   );
 }

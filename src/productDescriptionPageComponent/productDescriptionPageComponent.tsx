@@ -9,10 +9,11 @@ import FourthPart from "@/ProductCardDispalyPage/fourthPart/FourthPart";
 import SixthPart from "./sixthPart/SixthPart";
 import FifthPart from "./fifthPart/FifthPart";
 
-export default function ProductDescriptionPageComponent() {
+export default function ProductDescriptionPageComponent({ id }) {
+  console.log({ id });
   return (
     <div className={styles.container}>
-      <FirstPart></FirstPart>
+      <FirstPart id={id}></FirstPart>
       <SecondPart></SecondPart>
       <ThirdPart />
       <FifthPart></FifthPart>

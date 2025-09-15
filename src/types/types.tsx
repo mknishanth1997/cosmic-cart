@@ -27,6 +27,8 @@ export type PlanetDetails = {
   planetTitleDescription: string;
   planetInnterDescription: string;
   planetRarity: string;
+  planetStars: number;
+  deliveryIn: number;
   planetOfferDetails: {
     hasOffer: boolean;
     offerPrice?: number;
@@ -36,7 +38,7 @@ export type PlanetDetails = {
   planetDescription: {
     paragraphs: string[];
     bulletPoints: string[];
-    images: string[];
+    images: object[];
     surfacePreviewImages: string[];
   };
   planetGallery: string[]; // replaces img1..img5 → better as array
