@@ -1,12 +1,15 @@
 .container {
   background: linear-gradient(90deg, #0f0c29 0%, #24243e 50%, #302b63 100%);
 }
+
 .container > div {
-  margin-bottom: 46px;
+  padding-bottom: 46px;
 }
+
 .firstHeading {
   text-align: center;
   font-size: 4rem;
+  color: #78dbe2;
   padding: 32px;
 }
 
@@ -14,4 +17,36 @@
   text-align: center;
   padding: 32px;
   color: #78dbe2;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 768px) {
+  .firstHeading {
+    font-size: 2.5rem; /* scale down */
+    padding: 16px;
+  }
+
+  .subHeading {
+    font-size: 1.25rem; /* smaller */
+    padding: 16px;
+  }
+
+  .container > div {
+    padding-bottom: 24px; /* tighter spacing */
+  }
+}
+
+.emoji {
+  font-size: 3rem;
+}
+@media (max-width: 480px) {
+  .firstHeading {
+    font-size: 2rem;
+    padding: 12px;
+  }
+
+  .subHeading {
+    font-size: 1rem;
+    padding: 12px;
+  }
 }

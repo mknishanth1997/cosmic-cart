@@ -5,9 +5,11 @@ import { useData } from "@/context/dataContext";
 import React from "react";
 import styles from "./TextDescription1part.module.css";
 import toast, { Toaster } from "react-hot-toast";
+import { useRouter } from "next/navigation"; // ✅ Correct
 
 export default function TextDescription1part({ id }) {
   const { cosmicShop, saveCosmicCart, allPlanetData } = useData();
+  const router = useRouter();
   console.log(typeof id);
   const planet = allPlanetData.find((planet) => planet.planetId === id);
   // Find the planet by id
@@ -148,7 +150,10 @@ export default function TextDescription1part({ id }) {
             variant="primary"
             size="lg"
             className="w-full sm:w-auto"
-            onClick={() => notify("Hi")}
+            onClick={() => {
+              notify("Hi");
+              router.push("/checkOutPage");
+            }}
           >
             Buy Now
           </ManyStyledButton>

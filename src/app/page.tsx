@@ -1,5 +1,6 @@
 "use client";
 
+import CheckoutPageComp from "@/checkoutPageComp/CheckoutPageComp";
 import { ProductCardDisplayPage } from "@/ProductCardDispalyPage/ProductCardDisplayPage";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <>
       <div>
         <ProductCardDisplayPage></ProductCardDisplayPage>
+        {/* <CheckoutPageComp></CheckoutPageComp> */}
       </div>
       {/* <ProductDescriptionPageComponent></ProductDescriptionPageComponent> */}
     </>

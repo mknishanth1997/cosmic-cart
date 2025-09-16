@@ -12,7 +12,7 @@ import Link from "next/link";
 import { extractBlogsKeys } from "@/Data/blogsRawData";
 import { useData } from "@/context/dataContext";
 import ProductCarousel from "@/productDescriptionPageComponent/firstPart/ImageProductCarosel.";
-
+import { useRouter } from "next/navigation";
 // Component
 export function ProductDisplayCard({
   planetThumbnailImg,
@@ -24,6 +24,7 @@ export function ProductDisplayCard({
   planetId,
 }) {
   const { cosmicShop, saveCosmicCart } = useData();
+  const router = useRouter();
   // Handle Wishlisht
   // check if this planet is in wishlist
   const isInWishList = cosmicShop.wishListItems.some(
@@ -78,54 +79,58 @@ export function ProductDisplayCard({
   return (
     <div className={styles.productDisplayCardContainer}>
       {/* Image Container */}
-      <div className={styles.imgContainer}>
-        <Image
-          className={styles.planetThumbnailImg}
-          src={planetThumbnailImg}
-          alt="Planet"
-          width={250}
-          height={250}
-        />
-
-        {/* Overlay */}
-        <div className={styles.imageOverlay}>
-          <span
-            className={`bg-red-700 text-white text-sm font-medium px-2 py-0.5 rounded-sm ${
-              planetOffer.hasOffer ? "visible" : "invisible"
-            }`}
-          >
-            {`${planetOffer.offerPrice}% Off`}
-          </span>
-          <Tooltip content="Add to Wishlist">
-            {" "}
-            <button
-              onClick={() => {
-                handleAddWishList(); // your existing toggle logic
-                toast(
-                  isInWishList
-                    ? "Removed from Wishlist 💔"
-                    : "Added to Wishlist ❤️"
-                );
-              }}
-              className={`${styles.overlayButton} transition-transform duration-300 
-    hover:scale-125 active:scale-95`}
+      <Link href={"/productDescriptionPage/1"}>
+        <div className={styles.imgContainer}>
+          <Image
+            className={styles.planetThumbnailImg}
+            src={planetThumbnailImg}
+            alt="Planet"
+            width={250}
+            height={250}
+          />
+          {/* Overlay */}
+          <div className={styles.imageOverlay}>
+            <span
+              className={`bg-red-700 text-white text-sm font-medium px-2 py-0.5 rounded-sm ${
+                planetOffer.hasOffer ? "visible" : "invisible"
+              }`}
             >
-              <FaHeart
-                size={18}
-                className={`transition-colors duration-300 ${
-                  isInWishList ? "text-red-500" : "text-gray-400"
-                }`}
-              />
-              {""}
-            </button>
-          </Tooltip>
+              {`${planetOffer.offerPrice}% Off`}
+            </span>
+            <Tooltip content="Add to Wishlist">
+              {" "}
+              <button
+                onClick={(e) => {
+                  e.preventDefault(); // ✅ stops Link navigation
+                  e.stopPropagation(); // ✅ stops event bubbling
+                  handleAddWishList();
+                  toast(
+                    isInWishList
+                      ? "Removed from Wishlist 💔"
+                      : "Added to Wishlist ❤️"
+                  );
+                }}
+                className={`${styles.overlayButton} transition-transform duration-300 
+    hover:scale-125 active:scale-95`}
+              >
+                <FaHeart
+                  size={18}
+                  className={`transition-colors duration-300 ${
+                    isInWishList ? "text-red-500" : "text-gray-400"
+                  }`}
+                />
+              </button>
+            </Tooltip>
+          </div>
         </div>
-      </div>
+      </Link>
 
       {/* Text Container */}
       <div className={styles.descriptionContainer}>
         <div className={styles.titleAndDescription}>
-          <h3 className={styles.planetHeaderText}>{planetName}</h3>
+          <h3 className={styles.planetHeaderText}>
+            <Link href={"/productDescriptionPage/1"}>{planetName}</Link>
+          </h3>
           <p>{planetDescription}</p>
         </div>
 
@@ -147,7 +152,13 @@ export function ProductDisplayCard({
         <div className={styles.actionButtons}>
           <Tooltip content="Purchase the Planet">
             {" "}
-            <ManyStyledButton variant="primary" size="md">
+            <ManyStyledButton
+              variant="primary"
+              size="md"
+              onClick={() => {
+                router.push("/checkOutPage");
+              }}
+            >
               Buy Now
             </ManyStyledButton>
           </Tooltip>

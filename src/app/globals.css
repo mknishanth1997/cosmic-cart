@@ -295,3 +295,8 @@ small {
     @apply bg-background text-foreground;
   }
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+}

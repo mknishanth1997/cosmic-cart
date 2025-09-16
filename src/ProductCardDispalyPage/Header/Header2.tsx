@@ -34,7 +34,7 @@ export function SecondaryHeader() {
         ))}
 
         <Link href="/productDescriptionPage/1">
-          <span>hikjdsf</span>
+          <span>Product Description page</span>
         </Link>
       </div>
 

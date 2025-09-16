@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import FirstPart from "./firstPart/FirstPart";
 import SecondPart from "./secondPart/SecondPart";
@@ -20,19 +21,31 @@ export default function ProductDescriptionPageComponent({ id }) {
         <SecondPart id={ID}></SecondPart>
       </div>
       <div>
-        <h3 className={styles.subHeading}>Explore every detail</h3>
+        <h3 className={styles.subHeading}>
+          {" "}
+          <span className={styles.emoji}>🔭</span> Explore every detail
+        </h3>
         <ThirdPart id={ID} />
       </div>
       <div>
-        <h3 className={styles.subHeading}>People also bought this</h3>
+        <h3 className={styles.subHeading}>
+          {" "}
+          <span className={styles.emoji}>🛍️</span> People also bought this
+        </h3>
         <FourthPart id={ID}></FourthPart>
       </div>
       <div>
-        <h3 className={styles.subHeading}>About this item</h3>
+        <h3 className={styles.subHeading}>
+          {" "}
+          <span className={styles.emoji}>📦</span> About this item
+        </h3>
         <SixthPart id={ID}></SixthPart>
       </div>
       <div>
-        <h3 className={styles.subHeading}>From the manufacturer</h3>
+        <h3 className={styles.subHeading}>
+          {" "}
+          <span className={styles.emoji}>🏭</span> From the manufacturer
+        </h3>
         <FifthPart id={ID}></FifthPart>
       </div>
     </div>
