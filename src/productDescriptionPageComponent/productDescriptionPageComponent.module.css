@@ -1,11 +1,17 @@
 .container {
   background: linear-gradient(90deg, #0f0c29 0%, #24243e 50%, #302b63 100%);
 }
+.container > div {
+  margin-bottom: 46px;
+}
 .firstHeading {
   text-align: center;
   font-size: 4rem;
+  padding: 32px;
 }
 
 .subHeading {
   text-align: center;
+  padding: 32px;
+  color: #78dbe2;
 }

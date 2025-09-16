@@ -9,7 +9,7 @@ export default function SixthPart({ id }) {
   const planet = allPlanetData.find((planet) => planet.planetId === id);
   return (
     <div>
-      <div className="flex justify-center items-center px-4 sm:px-6 py-6 overflow-x-hidden ">
+      <div className="flex justify-center items-center px-4 sm:px-6  overflow-x-hidden ">
         <div
           className={`w-full max-w-6xl flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 rounded-2xl p-4 sm:p-6 md:p-8 box-border ${style.cardContainer}`}
         >

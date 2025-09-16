@@ -10,7 +10,7 @@ export default function FourthPart({ id }) {
   const pab = planet?.peopleAlsoBought;
   console.log({ pab });
   return (
-    <div className="flex  w-full justify-center gap-16 flex-wrap ">
+    <div className="flex  w-full justify-center gap-16 flex-wrap   ">
       {pab?.map((t) => (
         <ProductCard key={t.productName} thing={t}></ProductCard>
       ))}

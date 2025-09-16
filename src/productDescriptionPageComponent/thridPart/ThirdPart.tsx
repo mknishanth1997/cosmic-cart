@@ -16,7 +16,7 @@ export default function ThirdPart({ id }) {
   console.log(typeof id);
   const planet = allPlanetData.find((planet) => planet.planetId === id);
   return (
-    <div className="flex gap-5 justify-center p-16 flex-wrap">
+    <div className="flex gap-5 justify-center  flex-wrap">
       {" "}
       {planet?.planetDescription.surfacePreviewImages.map((img, index) => (
         <ImageHolderWithTitle

@@ -14,17 +14,27 @@ export default function ProductDescriptionPageComponent({ id }) {
   const ID = Number(id);
   return (
     <div className={styles.container}>
-      <h1 className={styles.firstHeading}>Kepler-442a</h1>
-      <FirstPart id={id}></FirstPart>
-      <SecondPart id={ID}></SecondPart>
-      <h3 className={styles.subHeading}>Explore every detail</h3>
-      <ThirdPart id={ID} />
-      <h3 className={styles.subHeading}>People also bought this</h3>
-      <FourthPart id={ID}></FourthPart>
-      <h3 className={styles.subHeading}>About this item</h3>
-      <SixthPart id={ID}></SixthPart>
-      <h3 className={styles.subHeading}>From the manufacturer</h3>
-      <FifthPart id={ID}></FifthPart>
+      <h1 className={styles.firstHeading}>The Kepler-442a</h1>
+      <div>
+        <FirstPart id={id}></FirstPart>
+        <SecondPart id={ID}></SecondPart>
+      </div>
+      <div>
+        <h3 className={styles.subHeading}>Explore every detail</h3>
+        <ThirdPart id={ID} />
+      </div>
+      <div>
+        <h3 className={styles.subHeading}>People also bought this</h3>
+        <FourthPart id={ID}></FourthPart>
+      </div>
+      <div>
+        <h3 className={styles.subHeading}>About this item</h3>
+        <SixthPart id={ID}></SixthPart>
+      </div>
+      <div>
+        <h3 className={styles.subHeading}>From the manufacturer</h3>
+        <FifthPart id={ID}></FifthPart>
+      </div>
     </div>
   );
 }
