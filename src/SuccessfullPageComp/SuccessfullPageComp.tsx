@@ -6,8 +6,12 @@ import PlanetaryCertificate from "./PlanetaryCertficate";
 import DownloadSection from "./DownloadSection";
 import ManyStyledButton from "@/components/ManyStyledButton/ManyStyledButton";
 import Confetti from "react-confetti";
+import { useSearchParams } from "next/navigation";
 
 export default function SuccessfullPageComp() {
+  const searchParams = useSearchParams();
+  const input = searchParams.get("input");
+  console.log("Success page got ID:", input);
   const [showConfetti, setShowConfetti] = useState(true); // start immediately
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
@@ -72,7 +76,7 @@ export default function SuccessfullPageComp() {
       <HeroSection />
       <div className="flex flex-col justify-center items-center gap-6 px-4 sm:px-0">
         <div className="hidden sm:block">
-          <PlanetaryCertificate />
+          <PlanetaryCertificate input={input} />
         </div>
 
         <div className="w-full sm:w-auto flex justify-center">

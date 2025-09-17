@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function PlanetaryCertificate() {
+export default function PlanetaryCertificate({
+  input,
+}: {
+  input: string | null;
+}) {
   return (
     <div className="bg-slate-900 border-2 border-teal-400 rounded-lg p-8 sm:p-12 w-full max-w-xl mx-auto shadow-2xl text-center relative overflow-hidden">
       {/* Background radial gradient glow */}
@@ -38,7 +42,7 @@ export default function PlanetaryCertificate() {
                 Designated Owner
               </p>
               <p className="text-white text-2xl sm:text-3xl font-semibold">
-                Alex Rodriguez
+                {input || "John Doe"}
               </p>
             </div>
             <div>
@@ -46,7 +50,7 @@ export default function PlanetaryCertificate() {
                 Acquisition Date
               </p>
               <p className="text-white text-2xl sm:text-3xl font-semibold">
-                December 17, 2024
+                {new Date().toLocaleDateString()}
               </p>
             </div>
           </div>

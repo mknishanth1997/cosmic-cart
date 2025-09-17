@@ -1,6 +1,13 @@
 import { useData } from "@/context/dataContext";
 import style from "./ShoppingCart.module.css";
-const ShoppingCart = ({ id }: { id: string }) => {
+import { useState } from "react";
+type Props = {
+  id: string;
+  input: string;
+  setInput: React.Dispatch<React.SetStateAction<string>>;
+};
+
+const ShoppingCart: React.FC<Props> = ({ id, input, setInput }) => {
   const { allPlanetData, cosmicShop } = useData();
   let planetData = [];
   let planetIdd: number[] = [];
@@ -106,7 +113,10 @@ const ShoppingCart = ({ id }: { id: string }) => {
           type="text"
           placeholder="Enter your Name"
           className={style.inputBox}
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
         />
+        <p>{input}</p>
 
         <div className={style.summaryRow}>
           <span>Subtotal:</span>

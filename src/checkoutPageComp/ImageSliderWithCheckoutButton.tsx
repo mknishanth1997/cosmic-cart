@@ -1,11 +1,21 @@
 "use client";
 import ManyStyledButton from "@/components/ManyStyledButton/ManyStyledButton";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const ImageSliderWithCheckoutButton = ({
   autoSlide = true,
   interval = 3000,
+  input,
+  setInput,
+}: {
+  autoSlide?: boolean;
+  interval?: number;
+  input: string;
+  setInput: (input: string) => void;
 }) => {
+  const router = useRouter();
+
   const slides = [
     {
       id: 1,
@@ -36,7 +46,7 @@ const ImageSliderWithCheckoutButton = ({
     }, interval);
     return () => clearInterval(timer);
   }, [autoSlide, interval, slides.length]);
-
+  console.log(input);
   return (
     <div className="w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto p-4 sm:p-6 rounded-2xl shadow-xl bg-[linear-gradient(to_right,#581c87,#831843)] flex flex-col items-center">
       {/* Image container */}
@@ -70,7 +80,11 @@ const ImageSliderWithCheckoutButton = ({
 
       {/* Checkout button */}
       <div className="mt-3 sm:mt-5">
-        <ManyStyledButton>Purchase the Planet</ManyStyledButton>
+        <ManyStyledButton
+          onClick={() => router.push(`/SuccessPage?input=${input}`)}
+        >
+          Purchase the Planet
+        </ManyStyledButton>
       </div>
     </div>
   );
