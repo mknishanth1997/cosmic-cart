@@ -42,7 +42,7 @@ export default function PlanetaryCertificate({
                 Designated Owner
               </p>
               <p className="text-white text-2xl sm:text-3xl font-semibold">
-                {input || "John Doe"}
+                {input || "Go back & enter your name on checkout"}
               </p>
             </div>
             <div>
@@ -50,7 +50,11 @@ export default function PlanetaryCertificate({
                 Acquisition Date
               </p>
               <p className="text-white text-2xl sm:text-3xl font-semibold">
-                {new Date().toLocaleDateString()}
+                {new Date().toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
               </p>
             </div>
           </div>

@@ -7,7 +7,29 @@ import DownloadSection from "./DownloadSection";
 import ManyStyledButton from "@/components/ManyStyledButton/ManyStyledButton";
 import Confetti from "react-confetti";
 import { useSearchParams } from "next/navigation";
+import jsPDF from "jspdf";
+const generatePDF = () => {
+  const doc = new jsPDF();
 
+  doc.setFontSize(22);
+  doc.text(" Space Program Certificate", 20, 30);
+
+  doc.setFontSize(16);
+  doc.text("This is to certify that you now own:", 20, 50);
+
+  doc.setFontSize(18);
+  doc.text("Planet Kepler-22b", 20, 70);
+
+  doc.setFontSize(12);
+  doc.text(
+    "Thank you for your intergalactic purchase. Please contact your local space agency for travel arrangements.",
+    20,
+    90,
+    { maxWidth: 170 }
+  );
+
+  doc.save("certificate.pdf");
+};
 export default function SuccessfullPageComp() {
   const searchParams = useSearchParams();
   const input = searchParams.get("input");
@@ -80,7 +102,9 @@ export default function SuccessfullPageComp() {
         </div>
 
         <div className="w-full sm:w-auto flex justify-center">
-          <ManyStyledButton>Download PDF</ManyStyledButton>
+          <ManyStyledButton onClick={generatePDF}>
+            Download PDF
+          </ManyStyledButton>
 
           {showConfetti && (
             <Confetti
