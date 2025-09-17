@@ -11,11 +11,14 @@ import { useSearchParams } from "next/navigation";
 export default function CheckoutPageComp() {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
+  const numericId = id ? Number(id) : null;
+
+  console.log("Checkout page got ID:", numericId);
   return (
     <div className={style.container}>
       <div className={style.left}>
         <h1 className="text-center text-2xl font-bold mb-4">Checkout Page</h1>
-        <ShoppingCart />
+        <ShoppingCart id={numericId} />
       </div>
       <div className={style.right}>
         <ImageSliderWithCheckoutButton />

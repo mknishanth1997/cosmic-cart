@@ -129,7 +129,9 @@ export function ProductDisplayCard({
       <div className={styles.descriptionContainer}>
         <div className={styles.titleAndDescription}>
           <h3 className={styles.planetHeaderText}>
-            <Link href={"/productDescriptionPage/1"}>{planetName}</Link>
+            <Link href={`/productDescriptionPage/${planetId}`}>
+              {planetName}
+            </Link>
           </h3>
           <p>{planetDescription}</p>
         </div>

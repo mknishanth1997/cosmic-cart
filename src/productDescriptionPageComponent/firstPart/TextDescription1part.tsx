@@ -152,7 +152,7 @@ export default function TextDescription1part({ id }) {
             className="w-full sm:w-auto"
             onClick={() => {
               notify("Hi");
-              router.push("/checkOutPage");
+              router.push(`/checkOutPage?id=${String(id)}`);
             }}
           >
             Buy Now
