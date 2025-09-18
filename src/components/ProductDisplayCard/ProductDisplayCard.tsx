@@ -79,7 +79,7 @@ export function ProductDisplayCard({
   return (
     <div className={styles.productDisplayCardContainer}>
       {/* Image Container */}
-      <Link href={"/productDescriptionPage/1"}>
+      <Link href={`/productDescriptionPage/${planetId}`}>
         <div className={styles.imgContainer}>
           <Image
             className={styles.planetThumbnailImg}

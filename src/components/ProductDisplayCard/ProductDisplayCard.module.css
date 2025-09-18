@@ -152,3 +152,19 @@
     padding: 0.2rem 0.4rem;
   }
 }
+/* Text Area */
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1; /* make this area stretch */
+}
+
+/* Push buttons to bottom */
+.actionButtons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto; /* pins buttons at bottom */
+}

@@ -13,6 +13,7 @@ import FifthPart from "./fifthPart/FifthPart";
 export default function ProductDescriptionPageComponent({ id }) {
   console.log({ id });
   const ID = Number(id);
+  console.log({ ID });
   return (
     <div className={styles.container}>
       <h1 className={styles.firstHeading}>The Kepler-442a</h1>

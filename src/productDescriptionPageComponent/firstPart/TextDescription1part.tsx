@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation"; // ✅ Correct
 export default function TextDescription1part({ id }) {
   const { cosmicShop, saveCosmicCart, allPlanetData } = useData();
   const router = useRouter();
-  console.log(typeof id);
+  console.log({ id });
   const planet = allPlanetData.find((planet) => planet.planetId === id);
   // Find the planet by id
 
