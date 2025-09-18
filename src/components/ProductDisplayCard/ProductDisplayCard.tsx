@@ -158,7 +158,7 @@ export function ProductDisplayCard({
               variant="primary"
               size="md"
               onClick={() => {
-                router.push("/checkOutPage");
+                router.push(`/checkOutPage?id=${String(planetId)}`);
               }}
             >
               Buy Now

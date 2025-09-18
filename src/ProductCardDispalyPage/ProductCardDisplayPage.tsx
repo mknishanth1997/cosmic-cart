@@ -8,7 +8,11 @@ export function ProductCardDisplayPage() {
     <>
       {" "}
       <div className={styles.homePageContainer}>
-        <ImageSlider></ImageSlider>
+        <div className={styles.sliderWrapper}>
+          <ImageSlider />
+        </div>
+        <h1 className="text-center">Featured Products</h1>
+
         <div className={styles.ProductCardDispalyPage}>
           {allPlanetData.map((planet) => (
             <ProductDisplayCard
@@ -20,7 +24,7 @@ export function ProductCardDisplayPage() {
               planetPrice={planet.planetPrice}
               planetAvailabilty={planet.planetInStock}
               planetId={planet.planetId}
-            ></ProductDisplayCard>
+            />
           ))}
         </div>
       </div>
