@@ -8,6 +8,7 @@ import ManyStyledButton from "@/components/ManyStyledButton/ManyStyledButton";
 import Confetti from "react-confetti";
 import { useSearchParams } from "next/navigation";
 import jsPDF from "jspdf";
+import HeroSectionToPitchPage from "./HeroSectionToPitchPage";
 const generatePDF = () => {
   const doc = new jsPDF();
 
@@ -38,7 +39,6 @@ export default function SuccessfullPageComp() {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
   const confettiDuration = 5; // seconds, easy to change
-
   useEffect(() => {
     const handleResize = () => {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
@@ -161,6 +161,7 @@ export default function SuccessfullPageComp() {
           </svg>
         </div>
       </div>
+      <HeroSectionToPitchPage />
     </div>
   );
 }

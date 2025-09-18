@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div>
-        <SuccessfullPageComp></SuccessfullPageComp>
+        {/* <SuccessfullPageComp></SuccessfullPageComp> */}
         <ProductCardDisplayPage></ProductCardDisplayPage>
         {/* <CheckoutPageComp></CheckoutPageComp> */}
       </div>
