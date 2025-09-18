@@ -30,3 +30,10 @@
   margin: 0 auto; /* centers it horizontally */
   padding: 20px; /* breathing room */
 }
+
+.hedertext {
+  text-align: center;
+  font-size: 3rem;
+  color: #78dbe2;
+  padding: 20px;
+}

@@ -11,7 +11,7 @@ export function ProductCardDisplayPage() {
         <div className={styles.sliderWrapper}>
           <ImageSlider />
         </div>
-        <h1 className="text-center">Featured Products</h1>
+        <h1 className={styles.hedertext}>Featured Products</h1>
 
         <div className={styles.ProductCardDispalyPage}>
           {allPlanetData.map((planet) => (

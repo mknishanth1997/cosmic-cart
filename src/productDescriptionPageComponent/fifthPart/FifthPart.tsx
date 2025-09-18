@@ -9,13 +9,13 @@ export default function FifthPart({ id }) {
   const planet = allPlanetData.find((planet) => planet.planetId === id);
   return (
     <div className="flex flex-col items-center space-y-4 gap-8  ">
-      {planet?.planetGallery.map((img) => (
+      {planet?.planetGallery.map((img, index) => (
         <Image
+          key={index} // ✅ add unique key
           src={img}
-          alt="Banner 41"
-          width={1400} // pick something reasonable for your banner
-          height={400} // aspect ratio control
-          className="max-w-full h-auto"
+          alt={`Banner ${index + 1}`}
+          width={1400}
+          height={900}
         />
       ))}
     </div>

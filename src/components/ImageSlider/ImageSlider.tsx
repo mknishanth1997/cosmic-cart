@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 // desktop & mobile images (you can change mobile ones separately)
 const desktopImages = [
@@ -23,14 +22,14 @@ export default function ImageSlider() {
   const length = images.length;
 
   useEffect(() => {
-    const checkScreen = () => setIsMobile(window.innerWidth < 640); // sm breakpoint
+    const checkScreen = () => setIsMobile(window.innerWidth < 640);
     checkScreen();
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
   // Auto slide toggle
-  const autoSlide = false; // set true if you want autoplay
+  const autoSlide = false;
 
   useEffect(() => {
     if (!autoSlide) return;
@@ -47,11 +46,7 @@ export default function ImageSlider() {
     setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
 
   return (
-    <div
-      className={`relative w-full overflow-hidden rounded-xl border h-fit ${
-        isMobile ? "aspect-square" : "aspect-[16/6]"
-      }`}
-    >
+    <div className="relative w-full overflow-hidden rounded-xl">
       {/* Images */}
       <div
         className="flex transition-transform duration-700 ease-in-out"
@@ -62,7 +57,7 @@ export default function ImageSlider() {
             <img
               src={src}
               alt={`Slide ${idx + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-cover" // h-auto will prevent it from stretching
             />
           </div>
         ))}

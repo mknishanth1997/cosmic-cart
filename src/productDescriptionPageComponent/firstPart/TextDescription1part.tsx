@@ -2,12 +2,15 @@
 import { Badge } from "flowbite-react";
 import ManyStyledButton from "@/components/ManyStyledButton/ManyStyledButton";
 import { useData } from "@/context/dataContext";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./TextDescription1part.module.css";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation"; // ✅ Correct
+import ImageModal from "@/components/ImageModalWithProps";
 
 export default function TextDescription1part({ id }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const { cosmicShop, saveCosmicCart, allPlanetData } = useData();
   const router = useRouter();
   console.log({ id });
@@ -151,8 +154,15 @@ export default function TextDescription1part({ id }) {
             size="lg"
             className="w-full sm:w-auto"
             onClick={() => {
-              notify("Hi");
-              router.push(`/checkOutPage?id=${String(id)}`);
+              if (planet.planetName === "Earth") {
+                notify("Sorry! Earth is already owned by humans🌍");
+                setIsModalOpen(true);
+              } else {
+                notify("Proceeding to Checkout 🚀");
+                setTimeout(() => {
+                  router.push(`/checkOutPage?id=${String(id)}`);
+                }, 1000);
+              }
             }}
           >
             Buy Now
@@ -187,8 +197,15 @@ export default function TextDescription1part({ id }) {
           >
             {isInWishList ? "Remove from wish" : "Add to Wish"}
           </ManyStyledButton>
+          ;
         </div>
       </div>
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageSrc="/earthalreadyowned.webp"
+        imageAlt="Planet Preview"
+      />
     </div>
   );
 }
