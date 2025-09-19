@@ -3,14 +3,16 @@ import { useState, useEffect } from "react";
 
 // desktop & mobile images (you can change mobile ones separately)
 const desktopImages = [
-  "/WEB BANNER 12.png",
-  "/WEB BANNER 41.png",
-  "/WEB BANNER 8.png",
+  "/Pasted image (2).png",
+  // "/herobanner2.webp",
+  "/Pasted image (3).png",
+  "/Pasted image (4).png",
+  "/herobanner3.webp",
 ];
 
 const mobileImages = [
-  "/MOBILE BANNER 1.png",
-  "/MOBILE BANNER 2.png",
+  "/herobanner1.png",
+  "/herobanner2.webp",
   "/MOBILE BANNER 3.png",
 ];
 
@@ -35,7 +37,7 @@ export default function ImageSlider() {
     if (!autoSlide) return;
     const timer = setInterval(() => {
       setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
-    }, 3000);
+    }, 5000);
     return () => clearInterval(timer);
   }, [length, autoSlide]);
 
