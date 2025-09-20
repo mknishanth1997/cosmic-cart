@@ -13,7 +13,8 @@ export default function CheckoutPageComp() {
 
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
-  const numericId = id ? Number(id) : null;
+  // const numericId = id ? Number(id) : null;
+  const numericId = id;
 
   console.log("Checkout page got ID:", numericId);
   return (

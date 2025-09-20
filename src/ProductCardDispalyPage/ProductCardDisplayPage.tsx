@@ -2,6 +2,7 @@ import ImageSlider from "@/components/ImageSlider/ImageSlider";
 import { ProductDisplayCard } from "@/components/ProductDisplayCard/ProductDisplayCard";
 import styles from "./ProductCardDisplayPage.module.css";
 import { useData } from "@/context/dataContext";
+import Link from "next/link";
 export function ProductCardDisplayPage() {
   const { allPlanetData, saveCosmicCart } = useData();
   return (

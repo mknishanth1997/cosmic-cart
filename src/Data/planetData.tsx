@@ -4,9 +4,9 @@ export const planetData: Planets = [
   {
     planetId: 1,
     planetName: "Earth",
-    planetPrice: 1500,
+    planetPrice: 0,
     planetShortDescription:
-      "Earth: Inhabited by 7 billion hostile, territorial creatures called humans.You can buy the whole planet with paper. The 1% already did that.",
+      "Inhabited by 7 billion hostile, territorial creatures called humans. The only species that pays to live on their own planet. There’s a reason it’s free.",
     planetTitleDescription: "Not just a planet—an actual nightmare.",
     planetInnterDescription: "lorem",
     planetRarity: "Rare",

@@ -1,5 +1,7 @@
 "use client";
+import { useData } from "@/context/dataContext";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import {
   HiMenu,
   HiOutlineHeart,
@@ -8,6 +10,8 @@ import {
 } from "react-icons/hi";
 
 export function Header({ onToggle }: { onToggle: () => void }) {
+  const router = useRouter();
+  const { cosmicShop } = useData();
   return (
     <header className="bg-gray-200 dark:bg-gray-800 shadow-md">
       {/* Desktop layout (one row) */}
@@ -51,17 +55,23 @@ export function Header({ onToggle }: { onToggle: () => void }) {
 
         {/* Right: Wishlist + Cart */}
         <div className="flex items-center gap-4">
-          <button className="relative p-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700">
+          <button
+            className="relative p-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700"
+            onClick={() => router.push("/wishListPage?id=wishListItems")}
+          >
             <HiOutlineHeart className="h-6 w-6" />
             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1">
-              2
+              {cosmicShop.wishListItems.length}
             </span>
           </button>
 
-          <button className="relative p-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700">
+          <button
+            className="relative p-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700"
+            onClick={() => router.push("/wishListPage?id=cartItems")}
+          >
             <HiOutlineShoppingCart className="h-6 w-6" />
             <span className="absolute -top-1 -right-1 bg-cyan-500 text-white text-xs rounded-full px-1">
-              3
+              {cosmicShop.cartItems.length}
             </span>
           </button>
         </div>

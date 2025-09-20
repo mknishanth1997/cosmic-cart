@@ -1,13 +1,14 @@
 import { useData } from "@/context/dataContext";
-import style from "./ShoppingCart.module.css";
-import { useState } from "react";
+import style from "./cartandwishlistitemscomp.module.css";
+import ManyStyledButton from "@/components/ManyStyledButton/ManyStyledButton";
+import { use } from "react";
+import { useRouter } from "next/navigation";
 type Props = {
   id: string;
-  input: string;
-  setInput: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const ShoppingCart: React.FC<Props> = ({ id, input, setInput }) => {
+const CartAndWishComp: React.FC<Props> = ({ id }) => {
+  const router = useRouter();
   const { allPlanetData, cosmicShop } = useData();
   let planetData = [];
   let planetIdd: number[] = [];
@@ -105,34 +106,13 @@ const ShoppingCart: React.FC<Props> = ({ id, input, setInput }) => {
           <button className={style.removeBtn}>×</button>
         </div> */}
       </div>
-
-      {/* Summary */}
-      <div className={style.cartSummary}>
-        {/* Input Box */}
-        <input
-          type="text"
-          placeholder="Enter your Name"
-          className={style.inputBox}
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <p>{input}</p>
-
-        <div className={style.summaryRow}>
-          <span>Subtotal:</span>
-          <span>{`₹${totalPrice}`}</span>
-        </div>
-        <div className={style.summaryRow}>
-          <span>Shipping:</span>
-          <span>Free</span>
-        </div>
-        <div className={style.totalRow}>
-          <span>Total:</span>
-          <span>{`₹${totalPrice}`}</span>
-        </div>
+      <div className=" text-right pt-4">
+        <ManyStyledButton onClick={() => router.push(`/checkOutPage?id=${id}`)}>
+          Buy Now
+        </ManyStyledButton>
       </div>
     </div>
   );
 };
 
-export default ShoppingCart;
+export default CartAndWishComp;
