@@ -48,12 +48,10 @@ export const planetData: Planets = [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
         {
-          url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        { url: "/DG_FomMXoAA4OSI (1).jpg" },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -185,7 +183,8 @@ export const planetData: Planets = [
       offerPrice: 90,
     },
     planetInStock: true,
-    planetThumbnailImg: "/planet/planetn3.webp",
+    planetThumbnailImg:
+      "/vecteezy_serene-rustic-galaxy-with-black-hole-at-center-isolated_57571390 (1).webp",
     planetDescription: {
       paragraphs: [
         "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",

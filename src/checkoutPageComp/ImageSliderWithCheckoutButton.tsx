@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const ImageSliderWithCheckoutButton = ({
-  autoSlide = true,
+  autoSlide = false,
   interval = 3000,
   input,
   setInput,

@@ -31,9 +31,36 @@
   padding: 20px; /* breathing room */
 }
 
-.hedertext {
+/* Hero Banner Heading */
+.heroHeading {
   text-align: center;
   font-size: 3rem;
   color: #78dbe2;
-  padding: 20px;
+  padding: 20px 10px;
+  text-shadow: 0 0 10px rgba(120, 219, 226, 0.7); /* subtle glow */
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .heroHeading {
+    font-size: 2rem;
+    padding: 15px 5px;
+  }
+}
+
+/* Featured Products Heading */
+.featureHeading {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+  padding: 15px 10px 30px 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .featureHeading {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+  }
 }

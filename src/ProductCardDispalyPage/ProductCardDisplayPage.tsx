@@ -12,7 +12,11 @@ export function ProductCardDisplayPage() {
         <div className={styles.sliderWrapper}>
           <ImageSlider />
         </div>
-        <h1 className={styles.hedertext}>Featured Products</h1>
+        <h1 className={styles.heroHeading}>
+          Purchase your planet. It'll be very secure. No one can get there — not
+          even you.
+        </h1>
+        <h3 className={styles.featureHeading}>Featured Products</h3>
 
         <div className={styles.ProductCardDispalyPage}>
           {allPlanetData.map((planet) => (

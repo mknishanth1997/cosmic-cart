@@ -47,14 +47,17 @@ export function SidebarFlowBite({
           <SidebarItem href="/" icon={HiChartPie}>
             Home Page
           </SidebarItem>
-          <SidebarItem href="#" icon={HiViewBoards}>
-            Kanban
+          <SidebarItem
+            href="/wishListPage?id=wishListItems"
+            icon={HiViewBoards}
+          >
+            Wish List
           </SidebarItem>
-          <SidebarItem href="#" icon={HiInbox}>
-            Inbox
+          <SidebarItem href="/wishListPage?id=cartItems" icon={HiInbox}>
+            Cart
           </SidebarItem>
           <SidebarItem href="#" icon={HiUser}>
-            Users
+            Blogs
           </SidebarItem>
           <SidebarItem href="#" icon={HiShoppingBag}>
             Products
@@ -73,14 +76,15 @@ export function SidebarFlowBite({
           <Badge color="warning">Beta</Badge>
         </div>
         <div className="mb-3 text-sm text-cyan-900 dark:text-gray-400">
-          Preview the new Flowbite dashboard navigation! You can turn the new
-          navigation off for a limited time in your profile.
+          Products you Purchased will not be refunded, becuae you won't even
+          receive the product.We added a new feature to hack you bank account.{" "}
+          Try it
         </div>
         <a
           className="text-sm text-cyan-900 underline hover:text-cyan-800 dark:text-gray-400 dark:hover:text-gray-300"
           href="#"
         >
-          Turn new navigation off
+          Hack my bank account
         </a>
       </SidebarCTA>
     </Sidebar>

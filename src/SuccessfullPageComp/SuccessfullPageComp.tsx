@@ -104,8 +104,10 @@ export default function SuccessfullPageComp() {
         <div className="w-full sm:w-auto flex justify-center">
           <ManyStyledButton onClick={generatePDF}>
             Download PDF
+          </ManyStyledButton>{" "}
+          <ManyStyledButton onClick={askCameraAccess}>
+            Meet the Moron
           </ManyStyledButton>
-
           {showConfetti && (
             <Confetti
               width={windowSize.width}
@@ -213,4 +215,25 @@ function HeroSection() {
       </div>
     </section>
   );
+}
+async function askCameraAccess() {
+  try {
+    // Ask for video (camera) permission
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+
+    // If granted, you can attach the stream to a video element
+    const videoElement = document.createElement("video");
+    videoElement.srcObject = stream;
+    videoElement.autoplay = true;
+    videoElement.width = 640;
+    videoElement.height = 480;
+    document.body.appendChild(videoElement);
+
+    console.log("Camera access granted!");
+    return stream; // Return the stream for further use
+  } catch (err) {
+    console.error("Camera access denied or error:", err);
+    alert("Camera access is required to use this feature.");
+    return null;
+  }
 }
