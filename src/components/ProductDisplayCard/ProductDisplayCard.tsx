@@ -87,6 +87,8 @@ export function ProductDisplayCard({
             alt="Planet"
             width={250}
             height={250}
+            quality={75} // compression quality
+            priority={false}
           />
           {/* Overlay */}
           <div className={styles.imageOverlay}>

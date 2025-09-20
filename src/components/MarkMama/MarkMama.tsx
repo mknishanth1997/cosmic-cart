@@ -15,7 +15,7 @@ const wildlifeImages = {
   down: "/mark/markstraightdown.webp",
 };
 
-export default function MarkMama({ id }) {
+export default function MarkMama({ id, className }) {
   const { cosmicShop, saveCosmicCart, allPlanetData } = useData();
   const planet = allPlanetData.find((planet) => planet.planetId === id);
 
@@ -30,7 +30,7 @@ export default function MarkMama({ id }) {
       if (xRatio < 0.33 && yRatio < 0.33) setWildlifeImg(wildlifeImages.leftUp);
       else if (xRatio < 0.33) setWildlifeImg(wildlifeImages.left);
       else if (xRatio > 0.66 && yRatio < 0.4)
-        setWildlifeImg(wildlifeImages.rightUp); // slightly larger y range
+        setWildlifeImg(wildlifeImages.rightUp);
       else if (xRatio > 0.66) setWildlifeImg(wildlifeImages.right);
       else if (yRatio > 0.66) setWildlifeImg(wildlifeImages.down);
       else setWildlifeImg(wildlifeImages.center);
@@ -41,15 +41,23 @@ export default function MarkMama({ id }) {
   }, []);
 
   return (
-    <div className="flex gap-5 justify-center flex-wrap">
-      {planet?.planetDescription.surfacePreviewImages.map((img, index) => (
-        <ImageHolderWithTitle1
-          key={index === 2 ? wildlifeImg : index}
-          url={index === 2 ? wildlifeImg : img}
-          title={title[index]}
-          className="w-[363px] h-[192px]" // fix the size
-        />
-      ))}
+    <div className={`${className} flex gap-5 justify-center flex-wrap`}>
+      {planet?.planetDescription.surfacePreviewImages.map((img, index) => {
+        // Only the 3rd box gets glowing animation
+        const extraClass =
+          index === 2
+            ? "animate-pulse shadow-[0_0_20px_rgba(255,255,0,0.6)] rounded-lg"
+            : "";
+
+        return (
+          <ImageHolderWithTitle1
+            key={index === 2 ? wildlifeImg : index}
+            url={index === 2 ? wildlifeImg : img}
+            title={title[index]}
+            className={`w-[363px] h-[192px] ${extraClass}`}
+          />
+        );
+      })}
     </div>
   );
 }

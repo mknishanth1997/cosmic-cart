@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <>
       <div>
-        <MarkMama id={1}></MarkMama>
         {/* <SuccessfullPageComp></SuccessfullPageComp> */}
         <ProductCardDisplayPage></ProductCardDisplayPage>
         {/* <CheckoutPageComp></CheckoutPageComp> */}

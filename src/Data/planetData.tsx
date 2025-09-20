@@ -87,7 +87,7 @@ export const planetData: Planets = [
   },
   {
     planetId: 2,
-    planetName: "Kepler-442a",
+    planetName: "Andromeda galaxy",
     planetPrice: 15000,
     planetShortDescription:
       "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
@@ -101,7 +101,7 @@ export const planetData: Planets = [
       offerPrice: 90,
     },
     planetInStock: true,
-    planetThumbnailImg: "/planet/planet1.webp",
+    planetThumbnailImg: "/planet/planetn1.webp",
     planetDescription: {
       paragraphs: [
         "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
@@ -171,7 +171,7 @@ export const planetData: Planets = [
   },
   {
     planetId: 3,
-    planetName: "Kepler-442a",
+    planetName: "Dark Matter ",
     planetPrice: 15000,
     planetShortDescription:
       "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
@@ -185,7 +185,7 @@ export const planetData: Planets = [
       offerPrice: 90,
     },
     planetInStock: true,
-    planetThumbnailImg: "/planet/planet5.webp",
+    planetThumbnailImg: "/planet/planetn3.webp",
     planetDescription: {
       paragraphs: [
         "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
@@ -251,11 +251,25 @@ export const planetData: Planets = [
         productPrice: 15000.0,
         productImg: "/test.jpg",
       },
+      {
+        productName: "Terraforming Kit (Basic)",
+        productDescription:
+          "Start the process of making a hostile planet more hospitable with this starter kit.",
+        productPrice: 15000.0,
+        productImg: "/test.jpg",
+      },
+      {
+        productName: "Terraforming Kit (Basic)",
+        productDescription:
+          "Start the process of making a hostile planet more hospitable with this starter kit.",
+        productPrice: 15000.0,
+        productImg: "/test.jpg",
+      },
     ],
   },
   {
     planetId: 4,
-    planetName: "Kepler-442a",
+    planetName: "Sun",
     planetPrice: 15000,
     planetShortDescription:
       "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
@@ -269,7 +283,7 @@ export const planetData: Planets = [
       offerPrice: 90,
     },
     planetInStock: true,
-    planetThumbnailImg: "/planet/planet15.webp",
+    planetThumbnailImg: "/planet/planetn4.webp",
     planetDescription: {
       paragraphs: [
         "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
