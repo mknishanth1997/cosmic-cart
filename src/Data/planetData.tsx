@@ -170,35 +170,32 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "How not to get scammed",
+        productName: "Quantum Space suit",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/descriptiveImg/Andromeda/pab/pab1.png",
+          "Advanced protection for any environment—though not against stupidity. A helmet isn’t included, but luckily you won’t need one.",
+        productPrice: 73459,
+        productImg: "/pabm/suit.webp",
       },
       {
-        productName: "How to Get Your Money Back",
+        productName: "SVT XL Cruiser",
         productDescription:
-          "Impossible! We keep our money very safe. But hey, who can blame victims for trying?",
-        productPrice: 399.0,
-        productImg:
-          "/descriptiveImg/Earth/peoplealsobought/81azZUENLML._SL1500_.jpg",
+          "Fastest ship in the galaxy—though the service is painfully slow. Complimentary delays included, but you’ll get there… eventually.",
+        productPrice: 500000,
+        productImg: "/pabm/rock.webp",
       },
       {
-        productName: "How to Get Away with Murder",
+        productName: "Oxygen Farm Pro",
         productDescription:
-          "Some angry customers struck back. This book teaches you how to get away with murder… good luck finding us!",
+          "Sustained air for your colony—though freshness isn’t guaranteed. Comes slightly recycled, but hey, at least you’re breathing.",
         productPrice: 499.0,
-        productImg:
-          "/descriptiveImg/Earth/peoplealsobought/718uJ49Ha2L._SL1500_.jpg",
+        productImg: "/pabm/farm.webp",
       },
       {
-        productName: "Antidepressants",
+        productName: "Alien Snack Pack",
         productDescription:
-          "99.99% of our customers are depressed after purchasing. Stay healthy for our next scheme—pop one daily.",
+          "Exotic flavors from across the universe—personally hand-picked by our CEO, with questionable taste but undeniable commitment.",
         productPrice: 150.0,
-        productImg:
-          "/descriptiveImg/Earth/peoplealsobought/harrison-chang-i7F-niPiKOQ-unsplash.jpg",
+        productImg: "/pabm/choc.webp",
       },
     ],
   },
@@ -263,11 +260,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape1.webp",
+      "/alienlandscape/alienlandscape2.webp",
+      "/alienlandscape/alienlandscape3.webp",
+      "/alienlandscape/alienlandscape4.webp",
+      "/alienlandscape/alienlandscape5.webp",
     ],
     peopleAlsoBought: [
       {
@@ -361,11 +358,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape6.webp",
+      "/alienlandscape/alienlandscape7.webp",
+      "/alienlandscape/alienlandscape8.webp",
+      "/alienlandscape/alienlandscape9.webp",
+      "/alienlandscape/alienlandscape10.webp",
     ],
     peopleAlsoBought: [
       {
@@ -445,11 +442,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape11.webp",
+      "/alienlandscape/alienlandscape12.webp",
+      "/alienlandscape/alienlandscape13.webp",
+      "/alienlandscape/alienlandscape14.webp",
+      "/alienlandscape/alienlandscape15.webp",
     ],
     peopleAlsoBought: [
       {
@@ -529,11 +526,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape16.webp",
+      "/alienlandscape/alienlandscape17.webp",
+      "/alienlandscape/alienlandscape18.webp",
+      "/alienlandscape/alienlandscape19.webp",
+      "/alienlandscape/alienlandscape20.webp",
     ],
     peopleAlsoBought: [
       {
@@ -613,11 +610,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape21.webp",
+      "/alienlandscape/alienlandscape22.webp",
+      "/alienlandscape/alienlandscape23.webp",
+      "/alienlandscape/alienlandscape24.webp",
+      "/alienlandscape/alienlandscape25.webp",
     ],
     peopleAlsoBought: [
       {
@@ -697,11 +694,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape26.webp",
+      "/alienlandscape/alienlandscape27.webp",
+      "/alienlandscape/alienlandscape28.webp",
+      "/alienlandscape/alienlandscape29.webp",
+      "/alienlandscape/alienlandscape30.webp",
     ],
     peopleAlsoBought: [
       {
@@ -781,11 +778,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape31.webp",
+      "/alienlandscape/alienlandscape32.webp",
+      "/alienlandscape/alienlandscape33.webp",
+      "/alienlandscape/alienlandscape34.webp",
+      "/alienlandscape/alienlandscape35.webp",
     ],
     peopleAlsoBought: [
       {
@@ -865,11 +862,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape36.webp",
+      "/alienlandscape/alienlandscape37.webp",
+      "/alienlandscape/alienlandscape38.webp",
+      "/alienlandscape/alienlandscape39.webp",
+      "/alienlandscape/alienlandscape40.webp",
     ],
     peopleAlsoBought: [
       {
@@ -949,11 +946,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape41.webp",
+      "/alienlandscape/alienlandscape42.webp",
+      "/alienlandscape/alienlandscape43.webp",
+      "/alienlandscape/alienlandscape44.webp",
+      "/alienlandscape/alienlandscape45.webp",
     ],
     peopleAlsoBought: [
       {
@@ -1033,11 +1030,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape46.webp",
+      "/alienlandscape/alienlandscape47.webp",
+      "/alienlandscape/alienlandscape48.webp",
+      "/alienlandscape/alienlandscape49.webp",
+      "/alienlandscape/alienlandscape50.webp",
     ],
     peopleAlsoBought: [
       {
@@ -1117,11 +1114,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape51.webp",
+      "/alienlandscape/alienlandscape52.webp",
+      "/alienlandscape/alienlandscape53.webp",
+      "/alienlandscape/alienlandscape1.webp",
+      "/alienlandscape/alienlandscape2.webp",
     ],
     peopleAlsoBought: [
       {
@@ -1201,11 +1198,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape3.webp",
+      "/alienlandscape/alienlandscape4.webp",
+      "/alienlandscape/alienlandscape5.webp",
+      "/alienlandscape/alienlandscape6.webp",
+      "/alienlandscape/alienlandscape7.webp",
     ],
     peopleAlsoBought: [
       {
@@ -1285,11 +1282,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape8.webp",
+      "/alienlandscape/alienlandscape9.webp",
+      "/alienlandscape/alienlandscape10.webp",
+      "/alienlandscape/alienlandscape11.webp",
+      "/alienlandscape/alienlandscape12.webp",
     ],
     peopleAlsoBought: [
       {
@@ -1369,11 +1366,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape13.webp",
+      "/alienlandscape/alienlandscape14.webp",
+      "/alienlandscape/alienlandscape15.webp",
+      "/alienlandscape/alienlandscape16.webp",
+      "/alienlandscape/alienlandscape17.webp",
     ],
     peopleAlsoBought: [
       {
@@ -1453,11 +1450,11 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/alienlandscape/alienlandscape18.webp",
+      "/alienlandscape/alienlandscape19.webp",
+      "/alienlandscape/alienlandscape20.webp",
+      "/alienlandscape/alienlandscape21.webp",
+      "/alienlandscape/alienlandscape22.webp",
     ],
     peopleAlsoBought: [
       {

@@ -9,40 +9,36 @@ export default function ProductCard({ thing }) {
         {/* Main Content */}
         <div className="relative z-10 flex flex-col h-full">
           {/* Product Image */}
-          <div className="w-full h-[160px] relative rounded-lg overflow-hidden flex justify-center bg-gray-100">
-            <Image
-              src={thing.productImg}
-              alt="Planet Product"
-              fill
-              className="object-contain transition-transform duration-300 hover:scale-110"
-              style={{ objectPosition: "center" }}
-            />
-          </div>
-          {/* <div className="relative w-full h-full">
-            {" "}
+          <div className="w-full h-[160px] relative rounded-lg overflow-hidden flex justify-center items-center bg-gray-100">
             <Image
               src={thing.productImg}
               alt="Planet Product"
               fill
               className="object-cover transition-transform duration-300 hover:scale-110"
+              style={{ objectPosition: "center" }}
+              loading="lazy"
+              priority={false}
             />
-          </div> */}
+          </div>
 
           {/* Title + Description */}
-          <div className="flex-1 flex flex-col justify-between">
-            <div>
-              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 pt-2 pb-2">
+          <div className="flex-1 flex flex-col min-h-0">
+            {/* Title + Description Container */}
+            <div className="flex-1 min-h-0">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 pt-2 pb-2 break-words">
                 {thing.productName}
               </h3>
-              <p className="text-sm sm:text-base text-gray-200 leading-relaxed line-clamp-3">
-                {thing.productDescription}
-              </p>
+              <div className="flex-1 min-h-0 overflow-hidden">
+                <p className="text-sm sm:text-base text-gray-200 leading-relaxed break-words hyphens-auto">
+                  {thing.productDescription}
+                </p>
+              </div>
             </div>
 
             {/* Footer: Price + Button */}
-            <div className="mt-4 flex justify-between items-center w-full">
-              <span className="text-lg font-bold text-purple-200">{`Rs ${thing.productPrice}`}</span>
-              <button className="px-4 py-2 rounded-lg bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-medium text-sm transition-all duration-300 border border-transparent hover:border-white">
+            <div className="mt-4 flex justify-between items-center w-full flex-shrink-0">
+              <span className="text-lg font-bold text-purple-200 break-words">{`Rs ${thing.productPrice}`}</span>
+              <button className="px-4 py-2 rounded-lg bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-medium text-sm transition-all duration-300 border border-transparent hover:border-white whitespace-nowrap">
                 Buy Now
               </button>
             </div>
