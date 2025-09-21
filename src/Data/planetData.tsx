@@ -46,40 +46,59 @@ export const planetData: Planets = [
       ],
       images: [
         {
-          url: "/test.jpg",
+          url: "/descriptiveImg/Earth/Product/product1.webp",
         },
         {
-          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+          url: "/descriptiveImg/Earth/Product/product2.webp",
         },
-        { url: "/DG_FomMXoAA4OSI (1).jpg" },
+        { url: "/descriptiveImg/Earth/Product/product3.webp" },
       ],
       surfacePreviewImages: [
-        "/surfacePreview/surfacePreview1.webp",
-        "/surfacePreview/surfacePreview2.webp",
+        "/фото загрязнённого воздуха и воды.webp",
+        "/mi.webp",
         "/surfacePreview/surfacePreview3.webp",
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/descriptiveImg/Earth/Banners/banner6.webp",
+      "/descriptiveImg/Earth/Banners/banner5.webp",
+      "/descriptiveImg/Earth/Banners/banner4.webp",
+      "/descriptiveImg/Earth/Banners/banner3.webp",
+      "/descriptiveImg/Earth/Banners/banner2.webp",
+      "/descriptiveImg/Earth/Banners/banner1.webp",
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "How to Avoid Scams",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          "Customers who got scammed by us usually buy this book to avoid getting scammed next time.",
+        productPrice: 257.0,
+        productImg:
+          "/descriptiveImg/Earth/peoplealsobought/71aVQjv17iL._SL1500_.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "How to Get Your Money Back",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Impossible! We keep our money very safe. But hey, who can blame victims for trying?",
+        productPrice: 399.0,
+        productImg:
+          "/descriptiveImg/Earth/peoplealsobought/81azZUENLML._SL1500_.jpg",
+      },
+      {
+        productName: "How to Get Away with Murder",
+        productDescription:
+          "Some angry customers struck back. This book teaches you how to get away with murder… good luck finding us!",
+        productPrice: 499.0,
+        productImg:
+          "/descriptiveImg/Earth/peoplealsobought/718uJ49Ha2L._SL1500_.jpg",
+      },
+      {
+        productName: "Antidepressants",
+        productDescription:
+          "99.99% of our customers are depressed after purchasing. Stay healthy for our next scheme—pop one daily.",
+        productPrice: 150.0,
+        productImg:
+          "/descriptiveImg/Earth/peoplealsobought/harrison-chang-i7F-niPiKOQ-unsplash.jpg",
       },
     ],
   },
@@ -152,11 +171,12 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "How not to get scammed",
         productDescription:
           "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
         productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+        productImg:
+          "/descriptiveImg/Earth/peoplealsobought/71aVQjv17iL._SL1500_.webp",
       },
       {
         productName: "Terraforming Kit (Basic)",
