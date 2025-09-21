@@ -9,21 +9,24 @@ export default function ProductCard({ thing }) {
         {/* Main Content */}
         <div className="relative z-10 flex flex-col h-full">
           {/* Product Image */}
-          <div className="w-full h-[180px] relative rounded-lg overflow-hidden flex justify-center mb-4 ">
+          <div className="w-full h-[160px] relative rounded-lg overflow-hidden flex justify-center bg-gray-100">
             <Image
               src={thing.productImg}
-              alt={thing.productName}
-              fill
-              className="object-cover blur-sm scale-110"
-            />
-            <Image
-              src={thing.productImg}
-              alt={thing.productName}
+              alt="Planet Product"
               fill
               className="object-contain transition-transform duration-300 hover:scale-110"
               style={{ objectPosition: "center" }}
             />
           </div>
+          {/* <div className="relative w-full h-full">
+            {" "}
+            <Image
+              src={thing.productImg}
+              alt="Planet Product"
+              fill
+              className="object-cover transition-transform duration-300 hover:scale-110"
+            />
+          </div> */}
 
           {/* Title + Description */}
           <div className="flex-1 flex flex-col justify-between">

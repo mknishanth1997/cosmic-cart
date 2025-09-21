@@ -104,17 +104,17 @@ export const planetData: Planets = [
   },
   {
     planetId: 2,
-    planetName: "Andromeda galaxy",
-    planetPrice: 15000,
+    planetName: "Andromeda Galaxy",
+    planetPrice: 99999,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
-    planetTitleDescription: "Not just a planet, a new begining",
+      "2.5 million light years away. If you won’t visit Andromeda, it’ll visit you—just stay alive for 5 million light years.",
+    planetTitleDescription: "She's coming for us, fast. 120 km/s.",
     planetInnterDescription: "lorem",
     planetRarity: "Rare",
-    planetStars: 5,
+    planetStars: 3,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
@@ -147,27 +147,26 @@ export const planetData: Planets = [
       ],
       images: [
         {
-          url: "/test.jpg",
+          url: "/planet/planet19.webp",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        { url: "/descriptiveImg/Andromeda/Product/product1.webp" },
         {
-          url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          url: "/descriptiveImg/Andromeda/Product/product2.webp",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        { url: "/descriptiveImg/Andromeda/Product/product3.webp" },
       ],
       surfacePreviewImages: [
-        "/surfacePreview/surfacePreview1.webp",
-        "/surfacePreview/surfacePreview2.webp",
-        "/surfacePreview/surfacePreview3.webp",
+        "/descriptiveImg/Andromeda/surfacepreview/fc.webp",
+        "/descriptiveImg/Andromeda/surfacepreview/sp.webp",
+        "/descriptiveImg/Andromeda/surfacepreview/lw.webp",
       ],
     },
     planetGallery: [
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
-      "/WEB BANNER 41.png",
+      "/descriptiveImg/Andromeda/banner/banner1.jpg",
+      "/descriptiveImg/Andromeda/banner/banner2.jpg",
+      "/descriptiveImg/Andromeda/banner/banner3.jpg",
+      "/descriptiveImg/Andromeda/banner/banner4.jpg",
+      "/descriptiveImg/Andromeda/banner/banner5.jpg",
     ],
     peopleAlsoBought: [
       {
@@ -175,15 +174,31 @@ export const planetData: Planets = [
         productDescription:
           "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
         productPrice: 750.0,
-        productImg:
-          "/descriptiveImg/Earth/peoplealsobought/71aVQjv17iL._SL1500_.webp",
+        productImg: "/descriptiveImg/Andromeda/pab/pab1.png",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "How to Get Your Money Back",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Impossible! We keep our money very safe. But hey, who can blame victims for trying?",
+        productPrice: 399.0,
+        productImg:
+          "/descriptiveImg/Earth/peoplealsobought/81azZUENLML._SL1500_.jpg",
+      },
+      {
+        productName: "How to Get Away with Murder",
+        productDescription:
+          "Some angry customers struck back. This book teaches you how to get away with murder… good luck finding us!",
+        productPrice: 499.0,
+        productImg:
+          "/descriptiveImg/Earth/peoplealsobought/718uJ49Ha2L._SL1500_.jpg",
+      },
+      {
+        productName: "Antidepressants",
+        productDescription:
+          "99.99% of our customers are depressed after purchasing. Stay healthy for our next scheme—pop one daily.",
+        productPrice: 150.0,
+        productImg:
+          "/descriptiveImg/Earth/peoplealsobought/harrison-chang-i7F-niPiKOQ-unsplash.jpg",
       },
     ],
   },
@@ -290,7 +305,7 @@ export const planetData: Planets = [
     planetName: "Sun",
     planetPrice: 15000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Sun: About 15 million degrees hot. Perfect for cooking and all your energy needs. If it’s too hot to land, just land at night.",
     planetTitleDescription: "Not just a planet, a new begining",
     planetInnterDescription: "lorem",
     planetRarity: "Rare",
