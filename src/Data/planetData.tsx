@@ -1,4 +1,29 @@
 import { Planets } from "@/types/types";
+// Example: your 14 banners
+const banners = [
+  "/banner/banner1.webp",
+  "/banner/banner2.webp",
+  "/banner/banner3.webp",
+  "/banner/banner4.webp",
+  "/banner/banner5.webp",
+  "/banner/banner6.webp",
+  "/banner/banner7.webp",
+  "/banner/banner8.webp",
+  "/banner/banner9.webp",
+  "/banner/banner10.webp",
+  "/banner/banner11.webp",
+  "/banner/banner12.webp",
+  "/banner/banner13.webp",
+  "/banner/banner14.webp",
+];
+
+// Update planetData
+let bannerIndex = 0;
+const planetSquareCount = 48; // total planetSquare images
+const planetSurfCount = 51; // total planetSurf images
+
+let squareIndex = 1;
+let surfIndex = 1;
 
 export const planetData: Planets = [
   {
@@ -60,7 +85,7 @@ export const planetData: Planets = [
       ],
     },
     planetGallery: [
-      "/descriptiveImg/Earth/Banners/banner6.webp",
+      "/descriptiveImg/Earth/Banners/5520909.jpg",
       "/descriptiveImg/Earth/Banners/banner5.webp",
       "/descriptiveImg/Earth/Banners/banner4.webp",
       "/descriptiveImg/Earth/Banners/banner3.webp",
@@ -73,32 +98,28 @@ export const planetData: Planets = [
         productDescription:
           "Customers who got scammed by us usually buy this book to avoid getting scammed next time.",
         productPrice: 257.0,
-        productImg:
-          "/descriptiveImg/Earth/peoplealsobought/71aVQjv17iL._SL1500_.webp",
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab1.webp",
       },
       {
         productName: "How to Get Your Money Back",
         productDescription:
           "Impossible! We keep our money very safe. But hey, who can blame victims for trying?",
         productPrice: 399.0,
-        productImg:
-          "/descriptiveImg/Earth/peoplealsobought/81azZUENLML._SL1500_.jpg",
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab2.webp",
       },
       {
         productName: "How to Get Away with Murder",
         productDescription:
           "Some angry customers struck back. This book teaches you how to get away with murder… good luck finding us!",
         productPrice: 499.0,
-        productImg:
-          "/descriptiveImg/Earth/peoplealsobought/718uJ49Ha2L._SL1500_.jpg",
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab3.webp",
       },
       {
         productName: "Antidepressants",
         productDescription:
           "99.99% of our customers are depressed after purchasing. Stay healthy for our next scheme—pop one daily.",
         productPrice: 150.0,
-        productImg:
-          "/descriptiveImg/Earth/peoplealsobought/harrison-chang-i7F-niPiKOQ-unsplash.jpg",
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab4.webp",
       },
     ],
   },
@@ -156,13 +177,13 @@ export const planetData: Planets = [
         { url: "/descriptiveImg/Andromeda/Product/product3.webp" },
       ],
       surfacePreviewImages: [
-        "/descriptiveImg/Andromeda/surfacepreview/fc.webp",
-        "/descriptiveImg/Andromeda/surfacepreview/sp.webp",
-        "/descriptiveImg/Andromeda/surfacepreview/lw.webp",
+        "/figma/fig8.webp",
+        "/figma/fig1.webp",
+        "/figma/als1.webp",
       ],
     },
     planetGallery: [
-      "/descriptiveImg/Andromeda/banner/banner1.jpg",
+      "/banner/banner1.webp",
       "/descriptiveImg/Andromeda/banner/banner2.jpg",
       "/descriptiveImg/Andromeda/banner/banner3.jpg",
       "/descriptiveImg/Andromeda/banner/banner4.jpg",
@@ -204,7 +225,7 @@ export const planetData: Planets = [
     planetName: "Dark Matter",
     planetPrice: 15000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Get hold of the thing that holds the universe together. Darker than your ex. Delivered in a biodegradable, totally-not-apocalyptic paper bag.",
     planetTitleDescription: "Not just a planet, a new begining",
     planetInnterDescription: "lorem",
     planetRarity: "Rare",
@@ -244,9 +265,9 @@ export const planetData: Planets = [
       ],
       images: [
         {
-          url: "/test.jpg",
+          url: "/planetsqare/planetsqaure1.webp",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        { url: "/planetsurf/planet1.webp" },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
@@ -254,9 +275,9 @@ export const planetData: Planets = [
         { url: "/DG_FomMXoAA4OSI.jpeg" },
       ],
       surfacePreviewImages: [
-        "/surfacePreview/surfacePreview1.webp",
-        "/surfacePreview/surfacePreview2.webp",
-        "/surfacePreview/surfacePreview3.webp",
+        "/figma/fig2.webp",
+        "/figma/fig8.webp",
+        "/figma/als2.webp",
       ],
     },
     planetGallery: [
@@ -268,32 +289,32 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "Alien artifact",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
+          "Alien artifacts of unknown origin. Some website claim it's a cheap china toy, don't read those websites before buying.",
         productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+        productImg: "/figma/alar.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "Energy Core",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Very powerfull enery core. you can even wage wars with 4th diemnsion beings.",
+        productPrice: 3000.0,
+        productImg: "/figma/ener.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "Alien Relic",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Mysterious relics from an ancient alien civilization. Older than big bang itself.",
+        productPrice: 3500000,
+        productImg: "/figma/fig7.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "Lab Equipment",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
+          "State-of-the-art lab equipment for all your intergalactic research needs. Perfect for studying dark matter and other cosmic phenomena.",
         productPrice: 15000.0,
-        productImg: "/test.jpg",
+        productImg: "/figma/fig5.webp",
       },
     ],
   },
@@ -352,9 +373,9 @@ export const planetData: Planets = [
         { url: "/DG_FomMXoAA4OSI.jpeg" },
       ],
       surfacePreviewImages: [
-        "/surfacePreview/surfacePreview1.webp",
-        "/surfacePreview/surfacePreview2.webp",
-        "/surfacePreview/surfacePreview3.webp",
+        "/figma/fig7.webp",
+        "/figma/fig6.webp",
+        "/figma/als3.webp",
       ],
     },
     planetGallery: [
@@ -366,79 +387,100 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "The Moon",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
+          "Perfect for controlling tides, inspiring poets, and hosting alien landings. Grandma might even be cooking vadai up there.",
         productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+        productImg: "/figma/fig3.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "The Jupiton",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Perfect for protecting the inner planets from asteroids and providing a stunning view.",
+        productPrice: 15.0,
+        productImg: "/figma/fig4.webp",
+      },
+      {
+        productName: "Cosmic Dust",
+        productDescription:
+          "Ideal for creating stunning nebulae and star systems. Sprinkle it around for a touch of cosmic magic.",
+        productPrice: 750.0,
+        productImg: "/figma/fig2.webp",
+      },
+      {
+        productName: "Cosmic Byte",
+        productDescription:
+          "Not that shady keyboard brand—this one is where the gods themselves come to vacation.",
+        productPrice: 350.0,
+        productImg: "/figma/fig1.webp",
       },
     ],
   },
   {
     planetId: 5,
-    planetName: "Keplore Alpha",
-    planetPrice: 15000,
+    planetName: "Kepler 114b",
+    planetPrice: 27000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Earth’s estranged second cousin twice removed, lurking 1,400 light years away. Rumored to have sentient trees that judge your life choices and monsters that eat regrets. Bring a therapist and a blaster—therapy not included.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "This rock is basically Earth's mid-life crisis: distant, mysterious, and probably hiding some dark secrets under its canopy. Perfect for starting over if 'over' means dodging laser-eyed squirrels.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet5.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Kepler-114b boasts a tangled mess of foliage that's denser than your grandma's fruitcake, blocking out dual suns like nature's own blackout curtains. The ecosystem here is less 'symphony of life' and more 'chaotic mosh pit,' where every bug and beast is plotting your demise while pretending to be cute.",
+        "The atmosphere reeks of overripe alien fruits and desperation, with ground vibrations from creatures that might be dancing or just earthquakes in disguise. Exploring means stumbling into traps disguised as scenic spots—think waterfalls that whisper insults and caves full of existential dread.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Surface: Covered in liquid diamond seas.",
+        "Tourism: Visitors come for zero-gravity surfing.",
+        "Aliens: Known to host jellyfish-shaped sky nomads.",
+        "Weather: Rain falls upward into orbit.",
+        "Mystery: Signals detected, repeating every 42 minutes.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Brain Teasers",
+          para: "Here logic takes a vacation. You’ll find yourself debating with dodos who always think they’re right, and somehow losing heated arguments to potted plants that don’t even have mouths. Confidence here is optional, humility is mandatory.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Overthink Overload",
+          para: "Every choice feels like solving a cosmic riddle. Should you open the left door, or is the right door secretly judging you? By the time you decide, the opportunity has already grown legs and walked away laughing.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Pricey Pondering",
+          para: "Enlightenment is available, but it comes with a price tag larger than a small moon. You’ll gain profound insights into existence, but your wallet will achieve total emptiness faster than a black hole devouring starlight.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
-        "/surfacePreview/surfacePreview1.webp",
-        "/surfacePreview/surfacePreview2.webp",
-        "/surfacePreview/surfacePreview3.webp",
+        "/figma/fig7.webp",
+        "/figma/fig6.webp",
+        "/figma/als4.webp",
       ],
     },
     planetGallery: [
@@ -450,29 +492,44 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "How to Avoid Scams",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          "Customers who got scammed by us usually buy this book to avoid getting scammed next time.",
+        productPrice: 257.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab1.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "How to Get Your Money Back",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Impossible! We keep our money very safe. But hey, who can blame victims for trying?",
+        productPrice: 399.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab2.webp",
+      },
+      {
+        productName: "How to Get Away with Murder",
+        productDescription:
+          "Some angry customers struck back. This book teaches you how to get away with murder… good luck finding us!",
+        productPrice: 499.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab3.webp",
+      },
+      {
+        productName: "Antidepressants",
+        productDescription:
+          "99.99% of our customers are depressed after purchasing. Stay healthy for our next scheme—pop one daily.",
+        productPrice: 150.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab4.webp",
       },
     ],
   },
   {
     planetId: 6,
     planetName: "Keplore Beta",
-    planetPrice: 15000,
+    planetPrice: 34999,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "The unfinished demo version of a planet: bugs everywhere, literally. Bioluminescent plants that flicker like bad WiFi, and fauna with extra legs because why not? Early access pricing—updates may never come.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Think of it as software in perpetual beta: full of features that sound cool but crash your spaceship. Ideal for testers who enjoy debugging with a machete.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
@@ -484,40 +541,46 @@ export const planetData: Planets = [
     planetThumbnailImg: "/planet/planet6.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Keplore Beta's jungle is a glitchy wonderland where trees clip through each other and animals respawn mid-meal. The dual suns cause rendering errors, turning day into a strobe light party no one asked for.",
+        "Air smells like burnt code and unfinished dreams, with vibrations from underground servers humming error messages. Exploration? More like beta testing—watch out for invisible walls and game-breaking exploits by the local wildlife.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Rings: Shimmer with frozen neon gases.",
+        "Caves: Glow with naturally occurring bioluminescence.",
+        "Sky: Changes color hourly from green to orange.",
+        "Travel: Requires magnetic boots to stand upright.",
+        "Local Drink: 'Plasma Tea' brewed in boiling geysers.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Brain Teasers",
+          para: "Here logic takes a vacation. You’ll find yourself debating with dodos who always think they’re right, and somehow losing heated arguments to potted plants that don’t even have mouths. Confidence here is optional, humility is mandatory.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Overthink Overload",
+          para: "Every choice feels like solving a cosmic riddle. Should you open the left door, or is the right door secretly judging you? By the time you decide, the opportunity has already grown legs and walked away laughing.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Pricey Pondering",
+          para: "Enlightenment is available, but it comes with a price tag larger than a small moon. You’ll gain profound insights into existence, but your wallet will achieve total emptiness faster than a black hole devouring starlight.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -534,74 +597,95 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "Quantum Space suit",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          "Advanced protection for any environment—though not against stupidity. A helmet isn’t included, but luckily you won’t need one.",
+        productPrice: 73459,
+        productImg: "/pabm/suit.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "SVT XL Cruiser",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Fastest ship in the galaxy—though the service is painfully slow. Complimentary delays included, but you’ll get there… eventually.",
+        productPrice: 500000,
+        productImg: "/pabm/rock.webp",
+      },
+      {
+        productName: "Oxygen Farm Pro",
+        productDescription:
+          "Sustained air for your colony—though freshness isn’t guaranteed. Comes slightly recycled, but hey, at least you’re breathing.",
+        productPrice: 499.0,
+        productImg: "/pabm/farm.webp",
+      },
+      {
+        productName: "Alien Snack Pack",
+        productDescription:
+          "Exotic flavors from across the universe—personally hand-picked by our CEO, with questionable taste but undeniable commitment.",
+        productPrice: 150.0,
+        productImg: "/pabm/choc.webp",
       },
     ],
   },
   {
     planetId: 7,
-    planetName: "Keplore Gamma",
-    planetPrice: 15000,
+    planetName: "Trappist 69d",
+    planetPrice: 4000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "The ultimate party planet: bioluminescent flora that lights up like a rave, and six-legged creatures that dance better than you. Warning: The number 69 isn't just in the name—expect awkward encounters.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "If planets had Tinder profiles, this one would be all winks and innuendos. Dense jungles perfect for hide-and-seek with amorous aliens. Swipe right at your own risk.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet7.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Trappist 69d's canopy is a neon-lit love nest, filtering suns into mood lighting for interspecies mingling. Ecosystem? More like a singles bar where everything's trying to hook up.",
+        "Air thick with pheromones and bad decisions, ground pulsing with rhythmic thumps from mating rituals. Navigation involves dodging flirtatious vines and waterfalls that sound like pickup lines.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Nickname: The Library Planet, storing data in crystal spires.",
+        "Travelers: Pilgrims visit to download forgotten histories.",
+        "Surface: Smooth plains of glass-like basalt.",
+        "Orbit: Tilts dramatically, causing 3-year-long summers.",
+        "Phenomenon: Shooting stars rain daily like clockwork.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Brain Teasers",
+          para: "Here logic takes a vacation. You’ll find yourself debating with dodos who always think they’re right, and somehow losing heated arguments to potted plants that don’t even have mouths. Confidence here is optional, humility is mandatory.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Overthink Overload",
+          para: "Every choice feels like solving a cosmic riddle. Should you open the left door, or is the right door secretly judging you? By the time you decide, the opportunity has already grown legs and walked away laughing.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Pricey Pondering",
+          para: "Enlightenment is available, but it comes with a price tag larger than a small moon. You’ll gain profound insights into existence, but your wallet will achieve total emptiness faster than a black hole devouring starlight.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -618,29 +702,44 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "Alien artifact",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
+          "Alien artifacts of unknown origin. Some website claim it's a cheap china toy, don't read those websites before buying.",
         productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+        productImg: "/figma/alar.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "Energy Core",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
+          "Very powerfull enery core. you can even wage wars with 4th diemnsion beings.",
+        productPrice: 3000.0,
+        productImg: "/figma/ener.webp",
+      },
+      {
+        productName: "Alien Relic",
+        productDescription:
+          "Mysterious relics from an ancient alien civilization. Older than big bang itself.",
+        productPrice: 3500000,
+        productImg: "/figma/fig7.webp",
+      },
+      {
+        productName: "Lab Equipment",
+        productDescription:
+          "State-of-the-art lab equipment for all your intergalactic research needs. Perfect for studying dark matter and other cosmic phenomena.",
         productPrice: 15000.0,
-        productImg: "/test.jpg",
+        productImg: "/figma/fig5.webp",
       },
     ],
   },
   {
     planetId: 8,
-    planetName: "Keplore Delta",
-    planetPrice: 15000,
+    planetName: "Proxima 1337b",
+    planetPrice: 200000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Elite hacker's paradise: flora that codes in binary glow, fauna with firewall fur. 1337 light years of digital wilderness—bring your keyboard, leave your noobs behind.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "This world's ecosystem runs on code: plants hack sunlight, animals DDoS predators. Perfect for cyberpunks who want to unplug by plugging into nature's matrix.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
@@ -652,40 +751,46 @@ export const planetData: Planets = [
     planetThumbnailImg: "/planet/planet8.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Proxima 1337b's jungle is a virtual reality sim gone wild, with canopies that buffer light like slow internet. Life forms here evolve via updates, balancing on the edge of blue screen of death.",
+        "Air buzzes with data packets and electric pollen, ground vibrating from underground servers. Exploring means firewall breaches—caves full of encrypted treasures, waterfalls of cascading code.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Inhabitants: Giant insect colonies with city-scale hives.",
+        "Exports: Sweet resin used as interstellar fuel.",
+        "Landscape: Towers of stone shaped like organ pipes.",
+        "Events: Known for its week-long aurora festivals.",
+        "Danger: Frequent meteor showers scrape the surface.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Brain Teasers",
+          para: "Here logic takes a vacation. You’ll find yourself debating with dodos who always think they’re right, and somehow losing heated arguments to potted plants that don’t even have mouths. Confidence here is optional, humility is mandatory.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Overthink Overload",
+          para: "Every choice feels like solving a cosmic riddle. Should you open the left door, or is the right door secretly judging you? By the time you decide, the opportunity has already grown legs and walked away laughing.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Pricey Pondering",
+          para: "Enlightenment is available, but it comes with a price tag larger than a small moon. You’ll gain profound insights into existence, but your wallet will achieve total emptiness faster than a black hole devouring starlight.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -702,29 +807,44 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "The Moon",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
+          "Perfect for controlling tides, inspiring poets, and hosting alien landings. Grandma might even be cooking vadai up there.",
         productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+        productImg: "/figma/fig3.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "The Jupiton",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Perfect for protecting the inner planets from asteroids and providing a stunning view.",
+        productPrice: 15.0,
+        productImg: "/figma/fig4.webp",
+      },
+      {
+        productName: "Cosmic Dust",
+        productDescription:
+          "Ideal for creating stunning nebulae and star systems. Sprinkle it around for a touch of cosmic magic.",
+        productPrice: 750.0,
+        productImg: "/figma/fig2.webp",
+      },
+      {
+        productName: "Cosmic Byte",
+        productDescription:
+          "Not that shady keyboard brand—this one is where the gods themselves come to vacation.",
+        productPrice: 350.0,
+        productImg: "/figma/fig1.webp",
       },
     ],
   },
   {
     planetId: 9,
-    planetName: "Keplore Epsilon",
-    planetPrice: 15000,
+    planetName: "Tau Ceti 12b",
+    planetPrice: 43000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Boring name, exciting dangers: Glowing plants that lure you in, six-legged beasts that chase you out. Like a bad blind date in space—charming at first, deadly later.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Generic sci-fi planet #12: All the tropes, none of the originality. Jungles that swallow ships, fauna that thinks humans are snacks. Yawn—until it eats you.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
@@ -736,45 +856,51 @@ export const planetData: Planets = [
     planetThumbnailImg: "/planet/planet9.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Tau Ceti 12b's canopy is cliché central, blocking suns like every alien movie ever. Ecosystem balanced? Ha—it's a food chain where you're the appetizer.",
+        "Air scented with predictable peril, ground shaking from stampedes of unoriginal critters. Explore if you must: Caves of doom, waterfalls of woe, trees taller than plot holes.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Nickname: The Hollow Planet, echoing like a drum.",
+        "Explorers: Claim to hear voices in the vibrations.",
+        "Oceans: Made of liquid methane, home to crystal fish.",
+        "Mountains: Float slightly above the crust.",
+        "Time: One day lasts only 3 hours.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Brain Teasers",
+          para: "Here logic takes a vacation. You’ll find yourself debating with dodos who always think they’re right, and somehow losing heated arguments to potted plants that don’t even have mouths. Confidence here is optional, humility is mandatory.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Overthink Overload",
+          para: "Every choice feels like solving a cosmic riddle. Should you open the left door, or is the right door secretly judging you? By the time you decide, the opportunity has already grown legs and walked away laughing.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Pricey Pondering",
+          para: "Enlightenment is available, but it comes with a price tag larger than a small moon. You’ll gain profound insights into existence, but your wallet will achieve total emptiness faster than a black hole devouring starlight.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
-        "/surfacePreview/surfacePreview1.webp",
-        "/surfacePreview/surfacePreview2.webp",
-        "/surfacePreview/surfacePreview3.webp",
+        "/figma/fig7.webp",
+        "/figma/fig6.webp",
+        "/figma/als3.webp",
       ],
     },
     planetGallery: [
@@ -786,74 +912,95 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "How to Avoid Scams",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          "Customers who got scammed by us usually buy this book to avoid getting scammed next time.",
+        productPrice: 257.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab1.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "How to Get Your Money Back",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Impossible! We keep our money very safe. But hey, who can blame victims for trying?",
+        productPrice: 399.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab2.webp",
+      },
+      {
+        productName: "How to Get Away with Murder",
+        productDescription:
+          "Some angry customers struck back. This book teaches you how to get away with murder… good luck finding us!",
+        productPrice: 499.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab3.webp",
+      },
+      {
+        productName: "Antidepressants",
+        productDescription:
+          "99.99% of our customers are depressed after purchasing. Stay healthy for our next scheme—pop one daily.",
+        productPrice: 150.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab4.webp",
       },
     ],
   },
   {
     planetId: 10,
-    planetName: "Keplore Zeta",
-    planetPrice: 15000,
+    planetName: "Wolf 420a",
+    planetPrice: 72000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Blaze it on this hazy world: Bioluminescent buds that get you higher than orbit, six-legged stoners lounging everywhere. 420-friendly atmosphere—munchies not included.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "The ultimate chill spot: Jungles where everything's mellow, fauna too baked to bite. Perfect for space hippies or anyone needing a cosmic timeout.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet10.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Wolf 420a's canopy filters suns into a perpetual purple haze, ecosystem in eternal munch mode. Life here is slow, like really slow—blame the pollens.",
+        "Air thick with good vibes and giggles, ground vibrating from laid-back landslides. Explore at your own pace: Caves of contemplation, waterfalls of wisdom (or just water).",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Tourism: Known as the galaxy’s biggest amusement park.",
+        "Gravity: Fluctuates, making rides unpredictable.",
+        "Attractions: Volcano roller coasters fueled by real magma.",
+        "Sky: Filled with fireworks from unstable gases.",
+        "Food: Vendors sell 'Comet Candy' that evaporates instantly.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Brain Teasers",
+          para: "Here logic takes a vacation. You’ll find yourself debating with dodos who always think they’re right, and somehow losing heated arguments to potted plants that don’t even have mouths. Confidence here is optional, humility is mandatory.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Overthink Overload",
+          para: "Every choice feels like solving a cosmic riddle. Should you open the left door, or is the right door secretly judging you? By the time you decide, the opportunity has already grown legs and walked away laughing.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Pricey Pondering",
+          para: "Enlightenment is available, but it comes with a price tag larger than a small moon. You’ll gain profound insights into existence, but your wallet will achieve total emptiness faster than a black hole devouring starlight.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -870,74 +1017,95 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "Quantum Space suit",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          "Advanced protection for any environment—though not against stupidity. A helmet isn’t included, but luckily you won’t need one.",
+        productPrice: 73459,
+        productImg: "/pabm/suit.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "SVT XL Cruiser",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Fastest ship in the galaxy—though the service is painfully slow. Complimentary delays included, but you’ll get there… eventually.",
+        productPrice: 500000,
+        productImg: "/pabm/rock.webp",
+      },
+      {
+        productName: "Oxygen Farm Pro",
+        productDescription:
+          "Sustained air for your colony—though freshness isn’t guaranteed. Comes slightly recycled, but hey, at least you’re breathing.",
+        productPrice: 499.0,
+        productImg: "/pabm/farm.webp",
+      },
+      {
+        productName: "Alien Snack Pack",
+        productDescription:
+          "Exotic flavors from across the universe—personally hand-picked by our CEO, with questionable taste but undeniable commitment.",
+        productPrice: 150.0,
+        productImg: "/pabm/choc.webp",
       },
     ],
   },
   {
     planetId: 11,
-    planetName: "Keplore Eta",
-    planetPrice: 15000,
+    planetName: "HD 8675309d",
+    planetPrice: 25000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Jenny's cosmic hideout: Glowing plants playing '80s hits, six-legged fans moshing. Call the number—get a planet instead of a date.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "This world's vibe is pure Tommy Tutone: Jungles rocking to eternal earworms, fauna with rhythm. Perfect for music lovers or those haunted by one-hit wonders.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet11.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "HD 8675309d's canopy remixes sunlight into synth waves, ecosystem jamming like a never-ending concert. Life forms dance in harmony—or headbang.",
+        "Air filled with melodies and pollen beats, ground thumping basslines. Explore the hits: Caves echoing choruses, waterfalls splashing solos.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Surface: Made of compressed ice harder than steel.",
+        "Volcanoes: Erupt with frozen ammonia instead of lava.",
+        "Moons: Six icy companions orbit in perfect sync.",
+        "Culture: Nomadic tribes sail on ice sheets.",
+        "Phenomenon: Entire planet glows under starlight.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Brain Teasers",
+          para: "Here logic takes a vacation. You’ll find yourself debating with dodos who always think they’re right, and somehow losing heated arguments to potted plants that don’t even have mouths. Confidence here is optional, humility is mandatory.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Overthink Overload",
+          para: "Every choice feels like solving a cosmic riddle. Should you open the left door, or is the right door secretly judging you? By the time you decide, the opportunity has already grown legs and walked away laughing.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Pricey Pondering",
+          para: "Enlightenment is available, but it comes with a price tag larger than a small moon. You’ll gain profound insights into existence, but your wallet will achieve total emptiness faster than a black hole devouring starlight.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -954,74 +1122,95 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "Alien artifact",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
+          "Alien artifacts of unknown origin. Some website claim it's a cheap china toy, don't read those websites before buying.",
         productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+        productImg: "/figma/alar.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "Energy Core",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
+          "Very powerfull enery core. you can even wage wars with 4th diemnsion beings.",
+        productPrice: 3000.0,
+        productImg: "/figma/ener.webp",
+      },
+      {
+        productName: "Alien Relic",
+        productDescription:
+          "Mysterious relics from an ancient alien civilization. Older than big bang itself.",
+        productPrice: 3500000,
+        productImg: "/figma/fig7.webp",
+      },
+      {
+        productName: "Lab Equipment",
+        productDescription:
+          "State-of-the-art lab equipment for all your intergalactic research needs. Perfect for studying dark matter and other cosmic phenomena.",
         productPrice: 15000.0,
-        productImg: "/test.jpg",
+        productImg: "/figma/fig5.webp",
       },
     ],
   },
   {
     planetId: 12,
-    planetName: "Keplore Theta",
-    planetPrice: 15000,
+    planetName: "Vallayam Konda Planet",
+    planetPrice: 19000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Exotic name, mundane mayhem: Glowing greens that promise paradise, six-leggers that deliver chaos. Like ordering curry in space—spicy surprises await.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Sounds fancy, but it's basically space India with aliens: Dense jungles of spice-scented doom, fauna currying favor before biting.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet12.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Vallayam Konda's canopy spices up the suns, ecosystem a masala of life and death. Everything's interconnected—like a family reunion gone wrong.",
+        "Air aromatic with peril, ground rumbling monsoons. Navigate the naan-sense: Caves of curry, waterfalls of vindaloo vengeance.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "History: Said to be an ancient interstellar battlefield.",
+        "Craters: Still glow faintly with radiation scars.",
+        "Ruins: Alien weapons half-buried in deserts.",
+        "Tourism: Banned for safety, but smugglers sneak in.",
+        "Orbit: Wobbles strangely, like it remembers trauma.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Brain Teasers",
+          para: "Here logic takes a vacation. You’ll find yourself debating with dodos who always think they’re right, and somehow losing heated arguments to potted plants that don’t even have mouths. Confidence here is optional, humility is mandatory.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Overthink Overload",
+          para: "Every choice feels like solving a cosmic riddle. Should you open the left door, or is the right door secretly judging you? By the time you decide, the opportunity has already grown legs and walked away laughing.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Pricey Pondering",
+          para: "Enlightenment is available, but it comes with a price tag larger than a small moon. You’ll gain profound insights into existence, but your wallet will achieve total emptiness faster than a black hole devouring starlight.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -1038,74 +1227,95 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "The Moon",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
+          "Perfect for controlling tides, inspiring poets, and hosting alien landings. Grandma might even be cooking vadai up there.",
         productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+        productImg: "/figma/fig3.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "The Jupiton",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Perfect for protecting the inner planets from asteroids and providing a stunning view.",
+        productPrice: 15.0,
+        productImg: "/figma/fig4.webp",
+      },
+      {
+        productName: "Cosmic Dust",
+        productDescription:
+          "Ideal for creating stunning nebulae and star systems. Sprinkle it around for a touch of cosmic magic.",
+        productPrice: 750.0,
+        productImg: "/figma/fig2.webp",
+      },
+      {
+        productName: "Cosmic Byte",
+        productDescription:
+          "Not that shady keyboard brand—this one is where the gods themselves come to vacation.",
+        productPrice: 350.0,
+        productImg: "/figma/fig1.webp",
       },
     ],
   },
   {
     planetId: 13,
-    planetName: "Keplore Iota",
-    planetPrice: 15000,
+    planetName: "Krypton",
+    planetPrice: 1000000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
-    planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+      "Home of superheroes—or villains? Glowing rocks that grant powers, six-legged Krypto the dogs. Explodes eventually—buy low, sell never.",
+    planetTitleDescription: "Killing Superman: Ain’t cheap.",
+    planetInnterDescription:
+      "The planet that made Superman fly—and then blew up. Now yours for a fortune. Perfect for comic fans or doomsday preppers.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet13.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Krypton's jungle is radioactive chic, filtering red suns into power boosts. Ecosystem? Heroes and zeros in balance—until the boom.",
+        "Air charged with destiny, ground quaking prophecies. Explore legends: Caves of crystals, waterfalls of weakness.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Atmosphere: Smells faintly like burnt sugar.",
+        "Moons: One moon constantly rains sparks.",
+        "Terrain: Forests of metallic redwood trees.",
+        "Animals: Flying lizards feed on iron pollen.",
+        "Known for: Meteor rodeo competitions.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Brain Teasers",
+          para: "Here logic takes a vacation. You’ll find yourself debating with dodos who always think they’re right, and somehow losing heated arguments to potted plants that don’t even have mouths. Confidence here is optional, humility is mandatory.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Overthink Overload",
+          para: "Every choice feels like solving a cosmic riddle. Should you open the left door, or is the right door secretly judging you? By the time you decide, the opportunity has already grown legs and walked away laughing.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Pricey Pondering",
+          para: "Enlightenment is available, but it comes with a price tag larger than a small moon. You’ll gain profound insights into existence, but your wallet will achieve total emptiness faster than a black hole devouring starlight.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -1122,74 +1332,95 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "How to Avoid Scams",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          "Customers who got scammed by us usually buy this book to avoid getting scammed next time.",
+        productPrice: 257.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab1.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "How to Get Your Money Back",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Impossible! We keep our money very safe. But hey, who can blame victims for trying?",
+        productPrice: 399.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab2.webp",
+      },
+      {
+        productName: "How to Get Away with Murder",
+        productDescription:
+          "Some angry customers struck back. This book teaches you how to get away with murder… good luck finding us!",
+        productPrice: 499.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab3.webp",
+      },
+      {
+        productName: "Antidepressants",
+        productDescription:
+          "99.99% of our customers are depressed after purchasing. Stay healthy for our next scheme—pop one daily.",
+        productPrice: 150.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab4.webp",
       },
     ],
   },
   {
     planetId: 14,
     planetName: "Keplore Kappa",
-    planetPrice: 15000,
+    planetPrice: 66000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Frat house in space: Glowing kegs of flora, six-legged bros partying hard. Hazing includes alien initiations—bring your toga.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Greek letter vibes: Jungles of eternal rush week, fauna pledging loyalty or pranks. Ideal for bros and sorority space explorers.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet14.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Keplore Kappa's canopy turns suns into strobe lights, ecosystem a non-stop kegger. Life forms chug and chug—balance is for nerds.",
+        "Air beery and boisterous, ground pounding from frat stomps. Rush the risks: Caves of challenges, waterfalls of waterfalls (beer ones).",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Surface: Blanketed in perpetual snowfall.",
+        "Rivers: Flow with liquid nitrogen.",
+        "Phenomenon: Snowflakes ring like tiny bells.",
+        "Inhabitants: Burrowers that hibernate for centuries.",
+        "Myth: Said to hide a frozen alien king.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Brain Teasers",
+          para: "Here logic takes a vacation. You’ll find yourself debating with dodos who always think they’re right, and somehow losing heated arguments to potted plants that don’t even have mouths. Confidence here is optional, humility is mandatory.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Overthink Overload",
+          para: "Every choice feels like solving a cosmic riddle. Should you open the left door, or is the right door secretly judging you? By the time you decide, the opportunity has already grown legs and walked away laughing.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Pricey Pondering",
+          para: "Enlightenment is available, but it comes with a price tag larger than a small moon. You’ll gain profound insights into existence, but your wallet will achieve total emptiness faster than a black hole devouring starlight.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -1206,29 +1437,44 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "Quantum Space suit",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          "Advanced protection for any environment—though not against stupidity. A helmet isn’t included, but luckily you won’t need one.",
+        productPrice: 73459,
+        productImg: "/pabm/suit.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "SVT XL Cruiser",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Fastest ship in the galaxy—though the service is painfully slow. Complimentary delays included, but you’ll get there… eventually.",
+        productPrice: 500000,
+        productImg: "/pabm/rock.webp",
+      },
+      {
+        productName: "Oxygen Farm Pro",
+        productDescription:
+          "Sustained air for your colony—though freshness isn’t guaranteed. Comes slightly recycled, but hey, at least you’re breathing.",
+        productPrice: 499.0,
+        productImg: "/pabm/farm.webp",
+      },
+      {
+        productName: "Alien Snack Pack",
+        productDescription:
+          "Exotic flavors from across the universe—personally hand-picked by our CEO, with questionable taste but undeniable commitment.",
+        productPrice: 150.0,
+        productImg: "/pabm/choc.webp",
       },
     ],
   },
   {
     planetId: 15,
     planetName: "Keplore Lambda",
-    planetPrice: 15000,
+    planetPrice: 1300,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Budget bin special: Dimly glowing weeds, four-legged rejects (budget cuts). Like a dollar store planet—cheap thrills, cheaper quality.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Lambda means average in Greek—fitting for this meh world. Jungles on a shoestring, fauna phoning it in.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
@@ -1240,40 +1486,46 @@ export const planetData: Planets = [
     planetThumbnailImg: "/planet/planet15.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Keplore Lambda's canopy barely blocks suns, ecosystem scraping by. Life? Meh—balanced on coupons.",
+        "Air bland, ground mildly shaking. Explore the ordinary: Caves of nothing, waterfalls of whatever.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Rings: Made of shattered satellites.",
+        "Atmosphere: Permanently stormy, lightning arcs nonstop.",
+        "Exports: Energy harvested from the storms.",
+        "Events: Known for annual lightning-surf championships.",
+        "Phenomenon: Night sky glows brighter than the day.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Bargain Boredom",
+          para: "Nothing special— that's the special part.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Low Expectations",
+          para: "Won't disappoint if you expect nothing.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Cheap Thrill",
+          para: "Affordable apathy in space.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -1290,18 +1542,32 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "Alien artifact",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
+          "Alien artifacts of unknown origin. Some website claim it's a cheap china toy, don't read those websites before buying.",
         productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+        productImg: "/figma/alar.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "Energy Core",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
+          "Very powerfull enery core. you can even wage wars with 4th diemnsion beings.",
+        productPrice: 3000.0,
+        productImg: "/figma/ener.webp",
+      },
+      {
+        productName: "Alien Relic",
+        productDescription:
+          "Mysterious relics from an ancient alien civilization. Older than big bang itself.",
+        productPrice: 3500000,
+        productImg: "/figma/fig7.webp",
+      },
+      {
+        productName: "Lab Equipment",
+        productDescription:
+          "State-of-the-art lab equipment for all your intergalactic research needs. Perfect for studying dark matter and other cosmic phenomena.",
         productPrice: 15000.0,
-        productImg: "/test.jpg",
+        productImg: "/figma/fig5.webp",
       },
     ],
   },
@@ -1310,9 +1576,10 @@ export const planetData: Planets = [
     planetName: "Keplore Mu",
     planetPrice: 15000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Cow-themed cosmos: Glowing pastures, six-legged moos. Milk the galaxy—literally, with alien udders.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Mu as in moo: Dairy dreams in space. Jungles of grass, fauna herding themselves.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
@@ -1324,40 +1591,46 @@ export const planetData: Planets = [
     planetThumbnailImg: "/planet/planet16.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Keplore Mu's canopy grazes suns, ecosystem a pasture party. Life milks it for all it's worth.",
+        "Air cheesy, ground stampeding. Herd the horizons: Caves of curd, waterfalls of whey.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Nickname: The Clockwork Planet.",
+        "Surface: Gigantic gears and mechanisms visible from orbit.",
+        "Rumor: Entire world built by an ancient AI.",
+        "Time: Days pass with audible ticking across continents.",
+        "Mystery: No one knows who winds it up.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Dairy Dangers",
+          para: "Beware sour milk beasts. Freshness not guaranteed.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Farm Fresh Fiascos",
+          para: "Herd or be herded. Space cowboys welcome.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Moo Money",
+          para: "Affordable for aspiring space farmers.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -1374,74 +1647,95 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "The Moon",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
+          "Perfect for controlling tides, inspiring poets, and hosting alien landings. Grandma might even be cooking vadai up there.",
         productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+        productImg: "/figma/fig3.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "The Jupiton",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Perfect for protecting the inner planets from asteroids and providing a stunning view.",
+        productPrice: 15.0,
+        productImg: "/figma/fig4.webp",
+      },
+      {
+        productName: "Cosmic Dust",
+        productDescription:
+          "Ideal for creating stunning nebulae and star systems. Sprinkle it around for a touch of cosmic magic.",
+        productPrice: 750.0,
+        productImg: "/figma/fig2.webp",
+      },
+      {
+        productName: "Cosmic Byte",
+        productDescription:
+          "Not that shady keyboard brand—this one is where the gods themselves come to vacation.",
+        productPrice: 350.0,
+        productImg: "/figma/fig1.webp",
       },
     ],
   },
   {
     planetId: 17,
-    planetName: "Keplore Nu",
-    planetPrice: 15000,
+    planetName: "Double Ring dodo",
+    planetPrice: 98000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Twice the rings, twice the bling: Glowing halos of doom, six-legged dodos too dumb to fly. Extinction event waiting to happen—again.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Dodo-themed disaster: Jungles where stupidity reigns, fauna evolving backwards. Perfect for Darwin award seekers.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet18.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Double Ring Dodo's canopy doubles as debris fields, ecosystem dumbed down. Life? Doomed to repeat history.",
+        "Air thick with idiocy, ground quaking facepalms. Explore extinction: Caves of clueless, waterfalls of whoops.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Atmosphere: Thin, laced with glitter-like particles.",
+        "Flora: Trees grow sideways, chasing starlight.",
+        "Fauna: Worms that sing in chorus underground.",
+        "Tourism: Glow festivals attract poets and artists.",
+        "Phenomenon: Shadows appear hours before objects do.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Extinction Essentials",
+          para: "Watch dodos die hilariously. Bring popcorn.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Stupidity Safeguards",
+          para: "Don't catch the dumb. Helmets recommended.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Ring Price",
+          para: "Expensive for endless entertainment.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -1458,29 +1752,44 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "How to Avoid Scams",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          "Customers who got scammed by us usually buy this book to avoid getting scammed next time.",
+        productPrice: 257.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab1.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "How to Get Your Money Back",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Impossible! We keep our money very safe. But hey, who can blame victims for trying?",
+        productPrice: 399.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab2.webp",
+      },
+      {
+        productName: "How to Get Away with Murder",
+        productDescription:
+          "Some angry customers struck back. This book teaches you how to get away with murder… good luck finding us!",
+        productPrice: 499.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab3.webp",
+      },
+      {
+        productName: "Antidepressants",
+        productDescription:
+          "99.99% of our customers are depressed after purchasing. Stay healthy for our next scheme—pop one daily.",
+        productPrice: 150.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab4.webp",
       },
     ],
   },
   {
     planetId: 18,
     planetName: "Keplore Nu",
-    planetPrice: 15000,
+    planetPrice: 113000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Nude beach of the stars: Glowing skins, six-legged exhibitionists. Clothing optional—armor recommended.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Nu as in nude: Bare-all biosphere, jungles without shame. Fauna flaunts it all.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
@@ -1492,40 +1801,46 @@ export const planetData: Planets = [
     planetThumbnailImg: "/planet/planet1.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Keplore Nu's canopy bares the suns, ecosystem stripped down. Life au naturel—raw and revealing.",
+        "Air liberating, ground exposing secrets. Bare the basics: Caves of candor, waterfalls of wash-offs.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Surface: Made entirely of rust-red deserts.",
+        "Events: Dust devils grow as tall as skyscrapers.",
+        "Exports: Rare iron crystals used in starship hulls.",
+        "Moons: Cast triangular shadows instead of round.",
+        "Inhabitants: Nomads survive on dew-collecting tents.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Bare Necessities",
+          para: "Strip away inhibitions—or get stripped by vines.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Exposure Risks",
+          para: "Sunburns and stares. Sunscreen sold out.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Premium Peel",
+          para: "High price for high exposure.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -1542,74 +1857,95 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "Quantum Space suit",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          "Advanced protection for any environment—though not against stupidity. A helmet isn’t included, but luckily you won’t need one.",
+        productPrice: 73459,
+        productImg: "/pabm/suit.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "SVT XL Cruiser",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Fastest ship in the galaxy—though the service is painfully slow. Complimentary delays included, but you’ll get there… eventually.",
+        productPrice: 500000,
+        productImg: "/pabm/rock.webp",
+      },
+      {
+        productName: "Oxygen Farm Pro",
+        productDescription:
+          "Sustained air for your colony—though freshness isn’t guaranteed. Comes slightly recycled, but hey, at least you’re breathing.",
+        productPrice: 499.0,
+        productImg: "/pabm/farm.webp",
+      },
+      {
+        productName: "Alien Snack Pack",
+        productDescription:
+          "Exotic flavors from across the universe—personally hand-picked by our CEO, with questionable taste but undeniable commitment.",
+        productPrice: 150.0,
+        productImg: "/pabm/choc.webp",
       },
     ],
   },
   {
     planetId: 19,
-    planetName: "Keplore Nu",
-    planetPrice: 15000,
+    planetName: "Obsidian Throne",
+    planetPrice: 400000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Game of Planets: Dark glowing rocks, six-legged schemers. Claim the throne—or die trying. Winter is always coming.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Fantasy epic in space: Jungles of intrigue, fauna plotting coups. Perfect for would-be kings or cannon fodder.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet2.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Obsidian Throne's canopy shadows schemes, ecosystem of backstabs. Life plays the game—hard.",
+        "Air heavy with betrayal, ground trembling treachery. Quest the quagmires: Caves of conspiracies, waterfalls of woe.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Nickname: The Ocean in the Sky.",
+        "Oceans: Suspended above the surface in giant bubbles.",
+        "Travel: Boats float through the air instead of water.",
+        "Animals: Fish leap between clouds like dolphins.",
+        "Danger: Storms pop entire oceans in seconds.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Throne Games",
+          para: "Ally with aliens—or get shanked. Valar morghulis.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Betrayal Basics",
+          para: "Trust no one. Especially the cute ones.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Royal Ransom",
+          para: "Pricey for power plays.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -1626,74 +1962,95 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "Alien artifact",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
+          "Alien artifacts of unknown origin. Some website claim it's a cheap china toy, don't read those websites before buying.",
         productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+        productImg: "/figma/alar.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "Energy Core",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
+          "Very powerfull enery core. you can even wage wars with 4th diemnsion beings.",
+        productPrice: 3000.0,
+        productImg: "/figma/ener.webp",
+      },
+      {
+        productName: "Alien Relic",
+        productDescription:
+          "Mysterious relics from an ancient alien civilization. Older than big bang itself.",
+        productPrice: 3500000,
+        productImg: "/figma/fig7.webp",
+      },
+      {
+        productName: "Lab Equipment",
+        productDescription:
+          "State-of-the-art lab equipment for all your intergalactic research needs. Perfect for studying dark matter and other cosmic phenomena.",
         productPrice: 15000.0,
-        productImg: "/test.jpg",
+        productImg: "/figma/fig5.webp",
       },
     ],
   },
   {
     planetId: 20,
-    planetName: "Keplore Nu",
-    planetPrice: 15000,
+    planetName: "Blue Bamda 991",
+    planetPrice: 2000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Budget blue ball: Faintly glowing blues, six-legged blues singers. Depressing deals—sadness sold cheap.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "All shades of blue: Melancholy jungles, mopey fauna. For when you want space to cry in.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet3.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Blue Bamda 991's canopy tints suns sad, ecosystem down in the dumps. Life sings the blues—literally.",
+        "Air sorrowful, ground sobbing. Wallow in woes: Caves of cries, waterfalls of tears.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Atmosphere: Denser than water, flying is easier than walking.",
+        "Surface: Hidden under a permanent golden haze.",
+        "Inhabitants: Sky cities built on platforms of balloons.",
+        "Tourism: Famous for endless sky parades.",
+        "Mystery: Surface never seen by outsiders.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Sad Songs",
+          para: "Fauna croons heartbreak hits. Bring tissues.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Depression Dangers",
+          para: "Might make you blue. Antidepressants advised.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Bargain Blues",
+          para: "Cheap for cheerless charm.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -1710,74 +2067,96 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "The Moon",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
+          "Perfect for controlling tides, inspiring poets, and hosting alien landings. Grandma might even be cooking vadai up there.",
         productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+        productImg: "/figma/fig3.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "The Jupiton",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Perfect for protecting the inner planets from asteroids and providing a stunning view.",
+        productPrice: 15.0,
+        productImg: "/figma/fig4.webp",
+      },
+      {
+        productName: "Cosmic Dust",
+        productDescription:
+          "Ideal for creating stunning nebulae and star systems. Sprinkle it around for a touch of cosmic magic.",
+        productPrice: 750.0,
+        productImg: "/figma/fig2.webp",
+      },
+      {
+        productName: "Cosmic Byte",
+        productDescription:
+          "Not that shady keyboard brand—this one is where the gods themselves come to vacation.",
+        productPrice: 350.0,
+        productImg: "/figma/fig1.webp",
       },
     ],
   },
   {
     planetId: 21,
-    planetName: "Keplore Nu",
-    planetPrice: 15000,
+    planetName: "cadbury cosmic candine",
+    planetPrice: 5000,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Sweet space treat: Glowing candy canes, six-legged sugar rushes. Diabetic nightmares—delicious doom.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Chocolate cosmos: Jungles of junk food, fauna on sugar highs. For sweet tooths or crash dieters.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet4.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Cadbury Cosmic Candine's canopy sugars suns, ecosystem hyperactive. Life bounces off walls—sweetly.",
+        "Air candied, ground sticky. Indulge in indulgence: Caves of caramel, waterfalls of fudge.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Geology: Entire crust is made of glass.",
+        "Events: Earthquakes create dazzling light shows.",
+        "Travel: Visitors wear tinted helmets to avoid blindness.",
+        "Exports: Glass harvested for galactic art.",
+        "Myth: Said to be the birthplace of starlight.",
       ],
+
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Sweet Spots",
+          para: "Harvest hypers. Crash inevitable.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Sugar Shocks",
+          para: "Hyper fauna charges. Dentists on call.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Candy Cost",
+          para: "Cheap calories in cosmos.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -1794,74 +2173,95 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "How to Avoid Scams",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          "Customers who got scammed by us usually buy this book to avoid getting scammed next time.",
+        productPrice: 257.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab1.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "How to Get Your Money Back",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Impossible! We keep our money very safe. But hey, who can blame victims for trying?",
+        productPrice: 399.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab2.webp",
+      },
+      {
+        productName: "How to Get Away with Murder",
+        productDescription:
+          "Some angry customers struck back. This book teaches you how to get away with murder… good luck finding us!",
+        productPrice: 499.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab3.webp",
+      },
+      {
+        productName: "Antidepressants",
+        productDescription:
+          "99.99% of our customers are depressed after purchasing. Stay healthy for our next scheme—pop one daily.",
+        productPrice: 150.0,
+        productImg: "/descriptiveImg/Earth/peoplealsobought/pab4.webp",
       },
     ],
   },
   {
     planetId: 22,
-    planetName: "Keplore Nu",
-    planetPrice: 15000,
+    planetName: "Nebula oblangata",
+    planetPrice: 1500099,
     planetShortDescription:
-      "A verdant jungle world known for its bioluminescent flora and unique, six-legged fauna.",
+      "Brainy nebula nugget: Glowing neurons, six-legged thinkers. Overthink your purchase—philosophy included.",
     planetTitleDescription: "Not just a planet, a new beginning",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Medulla of the milky way: Jungles of jargon, fauna debating existence. For intellectuals or insomniacs.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
     planetOfferDetails: {
-      hasOffer: true,
+      hasOffer: false,
       offerPrice: 90,
     },
     planetInStock: true,
     planetThumbnailImg: "/planet/planet20.webp",
     planetDescription: {
       paragraphs: [
-        "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
-        "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
+        "Nebula Oblangata's canopy synapses suns, ecosystem pondering profundities. Life questions everything—including you.",
+        "Air intellectual, ground ruminating. Ponder the puzzles: Caves of cognition, waterfalls of wisdom.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Atmosphere: Breathable, pollens spark epiphanies.",
+        "Moons: Two thinkers 'Cogito' and 'Ergo,' glowing thoughtfully.",
+        "Gravity: 1.1 G, grounding ideas.",
+        "Known for: The Philosophical Forest and the Insight Inundations.",
+        "Local Flora: 'Thought Thistles' and 'Idea Ivies'.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Brain Teasers",
+          para: "Debate with dodos. Lose arguments to plants.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Overthink Overload",
+          para: "Paralysis by analysis. Action not guaranteed.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Pricey Pondering",
+          para: "Expensive enlightenment.",
         },
       ],
       images: [
         {
           url: "/test.jpg",
         },
-        { url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg" },
+        {
+          url: "/neelakshi-singh-fT7TgUqIf4Y-unsplash.jpg",
+        },
         {
           url: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
         },
-        { url: "/documerica-x-EG-R-bUTI-unsplash.jpg" },
-        { url: "/DG_FomMXoAA4OSI.jpeg" },
+        {
+          url: "/documerica-x-EG-R-bUTI-unsplash.jpg",
+        },
+        {
+          url: "/DG_FomMXoAA4OSI.jpeg",
+        },
       ],
       surfacePreviewImages: [
         "/surfacePreview/surfacePreview1.webp",
@@ -1878,19 +2278,68 @@ export const planetData: Planets = [
     ],
     peopleAlsoBought: [
       {
-        productName: "Orbital Scanner Module",
+        productName: "Quantum Space suit",
         productDescription:
-          "Enhance your ship's sensors to detect hidden resources and life forms on any planet.",
-        productPrice: 750.0,
-        productImg: "/benjamin-voros-phIFdC6lA4E-unsplash.jpg",
+          "Advanced protection for any environment—though not against stupidity. A helmet isn’t included, but luckily you won’t need one.",
+        productPrice: 73459,
+        productImg: "/pabm/suit.webp",
       },
       {
-        productName: "Terraforming Kit (Basic)",
+        productName: "SVT XL Cruiser",
         productDescription:
-          "Start the process of making a hostile planet more hospitable with this starter kit.",
-        productPrice: 15000.0,
-        productImg: "/test.jpg",
+          "Fastest ship in the galaxy—though the service is painfully slow. Complimentary delays included, but you’ll get there… eventually.",
+        productPrice: 500000,
+        productImg: "/pabm/rock.webp",
+      },
+      {
+        productName: "Oxygen Farm Pro",
+        productDescription:
+          "Sustained air for your colony—though freshness isn’t guaranteed. Comes slightly recycled, but hey, at least you’re breathing.",
+        productPrice: 499.0,
+        productImg: "/pabm/farm.webp",
+      },
+      {
+        productName: "Alien Snack Pack",
+        productDescription:
+          "Exotic flavors from across the universe—personally hand-picked by our CEO, with questionable taste but undeniable commitment.",
+        productPrice: 150.0,
+        productImg: "/pabm/choc.webp",
       },
     ],
   },
 ];
+
+planetData.forEach((planet) => {
+  planet.planetGallery = [];
+
+  for (let i = 0; i < 5; i++) {
+    planet.planetGallery.push(banners[bannerIndex]);
+    bannerIndex = (bannerIndex + 1) % banners.length; // loop back to 0 if we reach the end
+  }
+});
+planetData.forEach((planet, idx) => {
+  if (idx < 2) return; // skip first 2 planets
+
+  // first three images
+  const images = [
+    { url: planet.planetThumbnailImg }, // first = thumbnail
+    { url: `/planetsqare/planetsqaure${squareIndex}.webp` },
+    { url: `/planetsurf/planet${surfIndex}.webp` },
+  ];
+
+  // increment indices for next images
+  squareIndex = (squareIndex % planetSquareCount) + 1;
+  surfIndex = (surfIndex % planetSurfCount) + 1;
+
+  // last two images (next in sequence)
+  images.push(
+    { url: `/planetsqare/planetsqaure${squareIndex}.webp` },
+    { url: `/planetsurf/planet${surfIndex}.webp` }
+  );
+
+  // increment indices again for future planets
+  squareIndex = (squareIndex % planetSquareCount) + 1;
+  surfIndex = (surfIndex % planetSurfCount) + 1;
+
+  planet.planetDescription.images = images;
+});
