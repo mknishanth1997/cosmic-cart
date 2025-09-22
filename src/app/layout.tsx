@@ -6,6 +6,7 @@ import { ClientLayout } from "@/components/ClientLayout";
 import "flowbite/dist/flowbite.css";
 import "keen-slider/keen-slider.min.css";
 import { DataProvider } from "@/context/dataContext";
+import GlobalDarkReader from "@/DarkReader";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -46,7 +47,9 @@ export default function RootLayout({
       >
         {/* Wrap ClientLayout with DataProvider */}
         <DataProvider>
-          <ClientLayout>{children}</ClientLayout>
+          <GlobalDarkReader>
+            <ClientLayout>{children}</ClientLayout>
+          </GlobalDarkReader>
         </DataProvider>
       </body>
     </html>

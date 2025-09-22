@@ -15,6 +15,7 @@
     "@next/bundle-analyzer": "^15.5.3",
     "@popperjs/core": "^2.11.8",
     "class-variance-authority": "^0.7.1",
+    "darkreader": "^4.9.109",
     "flowbite": "^3.1.2",
     "flowbite-react": "^0.12.9",
     "framer-motion": "^12.23.14",

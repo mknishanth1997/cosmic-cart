@@ -1,23 +1,68 @@
-/* Card Container */
+/* Card Container (Original Dark Mode) */
 .productDisplayCardContainer {
   max-width: 320px;
   width: 100%;
   padding: 16px;
-  background-color: #24243e;
+  background-color: #24243e; /* Dark background */
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
-  height: 100%; /* ensures equal card height in grid */
+  height: 100%;
+  isolation: isolate;
 }
 
-/* Image Container */
+/* Base Dark Text Colors (for dark card) */
+.titleAndDescription > h3 {
+  color: #f9fafb; /* Light text on dark background */
+  margin-bottom: 6px;
+  font-size: clamp(1rem, 4vw, 1.25rem);
+  font-weight: 600;
+}
+
+.titleAndDescription > p {
+  color: #d1d5db; /* Softer light text on dark background */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.priceAndAvailability > h4 {
+  color: #78dbe2; /* Light accent color for price */
+}
+
+/* Light Mode Overrides */
+.light-mode.productDisplayCardContainer {
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly darker shadow for contrast */
+}
+
+.light-mode .titleAndDescription > h3 {
+  color: #1f2937; /* Dark text for heading */
+}
+
+.light-mode .titleAndDescription > p {
+  color: #4b5563; /* Darker, readable text for paragraph */
+}
+
+.light-mode .priceAndAvailability > h4 {
+  color: #1f2937; /* Dark, readable price */
+}
+
+.light-mode .priceAndAvailability span {
+  color: #374151; /* Dark badge text */
+}
+
+.light-mode .actionButtons button {
+  color: #1f2937; /* Dark button text */
+}
+
+/* Image Container (unchanged as requested) */
 .imgContainer {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3; /* maintains square */
+  aspect-ratio: 4/3;
   border-radius: 16px;
   overflow: hidden;
   background: radial-gradient(circle at 35% 35%, #374151 0%, #111827 100%);
@@ -37,7 +82,8 @@
   transform: scale(1.1);
 }
 
-/* Overlay */
+/* The rest of your styles that work in both modes */
+
 .imageOverlay {
   position: absolute;
   top: 0.5rem;
@@ -51,6 +97,7 @@
 
 .overlayButton {
   background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 9999px;
   padding: 0.35rem;
   cursor: pointer;
@@ -66,52 +113,32 @@
   transform: scale(1.1);
 }
 
-/* Discount badge */
 .discountBadge {
-  background-color: #fee2e2; /* red-100 */
-  color: #b91c1c; /* red-800 */
+  background-color: #fee2e2;
+  color: #b91c1c;
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
 }
 
-/* Text Area */
 .descriptionContainer {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* stretch to fill space */
-  min-height: 0; /* prevent flex overflow issues */
+  flex-grow: 1;
+  min-height: 0;
   gap: 12px;
 }
 
-/* Title + description stays at top */
 .titleAndDescription {
   flex-shrink: 0;
 }
 
-.titleAndDescription > h3 {
-  margin-bottom: 6px;
-  font-size: clamp(1rem, 4vw, 1.25rem);
-  font-weight: 600;
-}
-
-.titleAndDescription > p {
-  color: #6b7280;
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-/* Price & Stock — aligned just above buttons */
 .priceAndAvailability {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto; /* pushes down below description */
-}
-
-.priceAndAvailability > h4 {
-  color: #78dbe2;
+  margin-top: auto;
 }
 
 .priceAndAvailability span {
@@ -121,13 +148,12 @@
   border-radius: 0.25rem;
 }
 
-/* Action Buttons pinned to bottom */
 .actionButtons {
   display: flex;
   gap: 12px;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 8px; /* small spacing under price */
+  margin-top: 8px;
 }
 
 .speedDialWrapper {
@@ -135,7 +161,6 @@
   align-items: center;
 }
 
-/* Responsive tweaks */
 @media (max-width: 400px) {
   .productDisplayCardContainer {
     padding: 12px;

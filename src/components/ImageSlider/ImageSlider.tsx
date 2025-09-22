@@ -4,16 +4,16 @@ import { useState, useEffect } from "react";
 // desktop & mobile images (you can change mobile ones separately)
 const desktopImages = [
   "/Pasted image (2).png",
-  // "/herobanner2.webp",
   "/Pasted image (3).png",
   "/Pasted image (4).png",
   "/herobanner3.webp",
 ];
 
 const mobileImages = [
-  "/herobanner1.png",
-  "/herobanner2.webp",
-  "/MOBILE BANNER 3.png",
+  "/Pasted image (2).png",
+  "/Pasted image (3).png",
+  "/Pasted image (4).png",
+  "/herobanner3.webp",
 ];
 
 export default function ImageSlider() {

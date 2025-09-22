@@ -73,13 +73,13 @@ const ImageSliderWithCheckoutButton = ({
 
       {/* Text */}
       <div className="mt-4 sm:mt-6 text-center px-2 sm:px-4">
-        <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-100">
+        <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-100 pt-2">
           {slides[current].text}
         </h3>
       </div>
 
       {/* Checkout button */}
-      <div className="mt-3 sm:mt-5">
+      <div className="mt-3 sm:mt-5 pt-2">
         <ManyStyledButton
           onClick={() => router.push(`/SuccessPage?input=${input}`)}
         >
