@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const ImageSliderWithCheckoutButton = ({
-  autoSlide = false,
+  autoSlide = true,
   interval = 3000,
   input,
   setInput,
@@ -19,21 +19,21 @@ const ImageSliderWithCheckoutButton = ({
   const slides = [
     {
       id: 1,
-      src: "/planet/planet11.webp",
+      src: "/ps/ps4.webp",
       alt: "Planet 1",
-      text: "This could be you 🌍",
+      text: "This could be you ",
     },
     {
       id: 2,
-      src: "/planet/planet12.webp",
+      src: "/ps/headbang.gif",
       alt: "Planet 2",
-      text: "Discover the unknown 🚀",
+      text: "Wanna test how tough your wall is?",
     },
     {
       id: 3,
-      src: "/surfacePreview/surfacePreview1.webp",
+      src: "/ps/su.webp",
       alt: "Planet 3",
-      text: "Your journey starts here ✨",
+      text: "Meet you Maker",
     },
   ];
 

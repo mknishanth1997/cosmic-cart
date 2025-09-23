@@ -100,11 +100,8 @@ export default function SuccessfullPageComp() {
         <div className="hidden sm:block">
           <PlanetaryCertificate input={input} />
         </div>
-
+        <DownloadSection onClick={generatePDF}></DownloadSection>
         <div className="w-full sm:w-auto flex justify-center">
-          <ManyStyledButton onClick={generatePDF}>
-            Download PDF
-          </ManyStyledButton>{" "}
           <ManyStyledButton onClick={askCameraAccess}>
             Meet the Moron
           </ManyStyledButton>

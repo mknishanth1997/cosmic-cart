@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 
 // desktop & mobile images (you can change mobile ones separately)
 const desktopImages = [
-  "/Pasted image (2).png",
-  "/Pasted image (3).png",
-  "/Pasted image (4).png",
+  "/heroBanner/herobannermain1.webp",
+  "/heroBanner/herobannermain2.webp",
+  "/heroBanner/herobannermain3.webp",
   "/herobanner3.webp",
 ];
 

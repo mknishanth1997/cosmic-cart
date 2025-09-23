@@ -1,4 +1,4 @@
-export default function DownloadSection() {
+export default function DownloadSection({ onClick }) {
   return (
     <div className="flex-1 flex flex-col justify-center w-full max-w-xl sm:max-w-md mx-auto text-center p-4">
       <div className="space-y-4">
@@ -11,7 +11,10 @@ export default function DownloadSection() {
         </p>
 
         <div className="flex justify-center pt-2">
-          <button className="flex items-center space-x-2 px-8 py-3 bg-teal-500 text-slate-950 font-bold rounded-full shadow-lg hover:shadow-xl hover:bg-teal-400 transition-all duration-300 transform hover:-translate-y-1">
+          <button
+            onClick={onClick}
+            className="flex items-center space-x-2 px-8 py-3 bg-teal-500 text-slate-950 font-bold rounded-full shadow-lg hover:shadow-xl hover:bg-teal-400 transition-all duration-300 transform hover:-translate-y-1"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

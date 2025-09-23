@@ -1,26 +1,27 @@
 "use client";
 import ManyStyledButton from "@/components/ManyStyledButton/ManyStyledButton";
 import { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
-const ImageSlider2ForThisComp = ({ autoSlide = false, interval = 3000 }) => {
+const ImageSlider2ForThisComp = ({ autoSlide = true, interval = 3000 }) => {
   const slides = [
     {
       id: 1,
-      src: "/planet/planet11.webp",
+      src: "/ps/ps1.webp",
       alt: "Planet 1",
-      text: "This could be you 🌍",
+      text: "Share this with your friends ",
     },
     {
       id: 2,
-      src: "/planet/planet12.webp",
+      src: "/ps/ps2.webp",
       alt: "Planet 2",
-      text: "Discover the unknown 🚀",
+      text: "Be like us",
     },
     {
       id: 3,
-      src: "/surfacePreview/surfacePreview1.webp",
+      src: "/ps/ps3.webp",
       alt: "Planet 3",
-      text: "Your journey starts here ✨",
+      text: "Serve the soviet union",
     },
   ];
 
@@ -36,6 +37,8 @@ const ImageSlider2ForThisComp = ({ autoSlide = false, interval = 3000 }) => {
   return (
     <div className="w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto p-4 sm:p-6 rounded-2xl shadow-xl bg-[linear-gradient(to_right,#581c87,#831843)] flex flex-col items-center">
       {/* Image container */}
+      <Toaster></Toaster>
+
       <div className="relative w-full h-56 sm:h-64 md:h-80 lg:h-96 rounded-xl bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
         <img
           src={slides[current].src}
@@ -66,7 +69,12 @@ const ImageSlider2ForThisComp = ({ autoSlide = false, interval = 3000 }) => {
 
       {/* Checkout button */}
       <div className="mt-3 sm:mt-5">
-        <ManyStyledButton>Purchase the Planet</ManyStyledButton>
+        <button
+          className="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded flex items-center gap-2"
+          onClick={() => toast.success("Link Copied to Clipboard")}
+        >
+          <span className="text-2xl">☭</span>I serve the soviet union
+        </button>
       </div>
     </div>
   );
