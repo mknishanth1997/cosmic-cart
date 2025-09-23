@@ -1,12 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
-// desktop & mobile images (you can change mobile ones separately)
+// desktop & mobile images
 const desktopImages = [
   "/heroBanner/herobannermain1.webp",
   "/heroBanner/herobannermain2.webp",
   "/heroBanner/herobannermain3.webp",
-  "/herobanner3.webp",
+  "/heroBanner/herobanner3.webp",
 ];
 
 const mobileImages = [
@@ -31,7 +32,7 @@ export default function ImageSlider() {
   }, []);
 
   // Auto slide toggle
-  const autoSlide = false;
+  const autoSlide = true;
 
   useEffect(() => {
     if (!autoSlide) return;
@@ -55,11 +56,13 @@ export default function ImageSlider() {
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {images.map((src, idx) => (
-          <div key={idx} className="w-full flex-none">
-            <img
+          <div key={idx} className="w-full flex-none relative h-[500px]">
+            <Image
               src={src}
               alt={`Slide ${idx + 1}`}
-              className="w-full h-auto object-cover" // h-auto will prevent it from stretching
+              fill
+              priority={idx === 0} // 🚀 only first one loads eagerly
+              className="object-cover block"
             />
           </div>
         ))}

@@ -33,7 +33,7 @@ export default function DownloadSection({ onClick }) {
 
         <div className="pt-2">
           <p className="text-gray-500 text-xs italic">
-            High-Quality PDF &bull; Print Ready
+            📄 High-Quality PDF &bull; 🖨️ Print Ready
           </p>
         </div>
       </div>
