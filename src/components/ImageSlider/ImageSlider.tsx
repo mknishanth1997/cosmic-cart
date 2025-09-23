@@ -61,7 +61,7 @@ export default function ImageSlider() {
               src={src}
               alt={`Slide ${idx + 1}`}
               fill
-              priority={idx === 0} // 🚀 only first one loads eagerly
+              priority={idx === 0}
               className="object-cover block"
             />
           </div>

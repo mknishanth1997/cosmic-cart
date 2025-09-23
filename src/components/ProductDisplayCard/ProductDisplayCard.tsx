@@ -9,11 +9,19 @@ import { useState } from "react";
 import ShareSpeedDial from "@/Library/flow-bite/SpeedDial/ShareSpeedDial";
 import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
-import { extractBlogsKeys } from "@/Data/blogsRawData";
 import { useData } from "@/context/dataContext";
-import ProductCarousel from "@/productDescriptionPageComponent/firstPart/ImageProductCarosel.";
 import { useRouter } from "next/navigation";
-// Component
+
+type ProductDisplayCardProps = {
+  planetThumbnailImg: string;
+  planetOffer: { hasOffer: boolean; offerPrice?: number };
+  planetName: string;
+  planetDescription: string;
+  planetPrice: number | string;
+  planetAvailabilty: boolean;
+  planetId: string | number;
+};
+
 export function ProductDisplayCard({
   planetThumbnailImg,
   planetOffer,
@@ -22,10 +30,10 @@ export function ProductDisplayCard({
   planetPrice,
   planetAvailabilty,
   planetId,
-}) {
+}: ProductDisplayCardProps) {
   const { cosmicShop, saveCosmicCart } = useData();
   const router = useRouter();
-  // Handle Wishlisht
+
   // check if this planet is in wishlist
   const isInWishList = cosmicShop.wishListItems.some(
     (item) => item.planetId === planetId
@@ -54,7 +62,6 @@ export function ProductDisplayCard({
     });
   }
 
-  // Shopping Cart
   function handleAddShoppingCart() {
     let updatedShoppingCart;
     if (isINShoppingCart) {
@@ -72,23 +79,40 @@ export function ProductDisplayCard({
       cartItems: updatedShoppingCart,
     });
   }
-  const [wishList, setWishList] = useState<boolean>(false);
-  // Toast Message
-  const notify = (t: string) => toast.success(t);
-  const planetIdeintification = planetId;
+
+  // Price formatter for India (₹ and Indian digit grouping)
+  const formatPrice = (p: number | string) => {
+    // sanitize input (strip non-numeric characters)
+    const numeric =
+      typeof p === "number" ? p : Number(String(p).replace(/[^0-9.-]+/g, ""));
+    const amount = Number.isFinite(numeric) ? numeric : 0;
+
+    // INR formatting, no decimal places (change maximumFractionDigits if you want paise)
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 0,
+    }).format(amount);
+  };
+
   return (
     <div className={styles.productDisplayCardContainer}>
       {/* Image Container */}
       <Link href={`/productDescriptionPage/${planetId}`}>
         <div className={styles.imgContainer}>
+          {/* Keep using next/image but add responsive hints + lazy loading */}
           <Image
             className={styles.planetThumbnailImg}
             src={planetThumbnailImg}
-            alt="Planet"
+            alt={`${planetName} thumbnail`}
             width={250}
             height={250}
             quality={75} // compression quality
             priority={false}
+            sizes="(max-width: 640px) 120px, 250px" // helps Next.js choose right srcset
+            loading="lazy"
+            fetchPriority="low"
+            style={{ objectFit: "cover" }} // prevents weird letterbox/space
           />
           {/* Overlay */}
           <div className={styles.imageOverlay}>
@@ -100,7 +124,6 @@ export function ProductDisplayCard({
               {`${planetOffer.offerPrice}% Off`}
             </span>
             <Tooltip content="Add to Wishlist">
-              {" "}
               <button
                 onClick={(e) => {
                   e.preventDefault(); // ✅ stops Link navigation
@@ -139,7 +162,7 @@ export function ProductDisplayCard({
         </div>
 
         <div className={styles.priceAndAvailability}>
-          <h4 className="price">{`Rs ${planetPrice}`}</h4>
+          <h4 className="price">{formatPrice(planetPrice)}</h4>
           <span
             className={`text-sm font-medium px-2 py-0.5 rounded-sm
     ${
@@ -155,7 +178,6 @@ export function ProductDisplayCard({
 
         <div className={styles.actionButtons}>
           <Tooltip content="Purchase the Planet">
-            {" "}
             <ManyStyledButton
               variant="primary"
               size="md"
@@ -168,14 +190,13 @@ export function ProductDisplayCard({
           </Tooltip>
 
           <Tooltip content="Add to Cart">
-            {" "}
             <ManyStyledButton
               variant="secondary"
               size="md"
               Icon={FaCartArrowDown}
               onClick={() => {
                 handleAddShoppingCart();
-                notify("Item added to the cart");
+                toast.success("Item added to the cart");
               }}
             >
               {""}
