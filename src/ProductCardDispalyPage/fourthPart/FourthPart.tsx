@@ -1,10 +1,9 @@
 "use client";
 import ProductCard from "@/components/productCardDummyHardCoded/ProductCard";
 import React from "react";
-import Image from "next/image";
 import { useData } from "@/context/dataContext";
 export default function FourthPart({ id }) {
-  const { cosmicShop, saveCosmicCart, allPlanetData } = useData();
+  const { allPlanetData } = useData();
   console.log(typeof id);
   const planet = allPlanetData.find((planet) => planet.planetId === id);
   const pab = planet?.peopleAlsoBought;

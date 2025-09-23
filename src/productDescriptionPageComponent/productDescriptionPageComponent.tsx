@@ -8,8 +8,12 @@ import FifthPart from "./fifthPart/FifthPart";
 import SixthPart from "./sixthPart/SixthPart";
 import MarkMama from "@/components/MarkMama/MarkMama";
 import styles from "./productDescriptionPageComponent.module.css";
+import { useData } from "@/context/dataContext";
 
 export default function ProductDescriptionPageComponent({ id }) {
+  const { cosmicShop, saveCosmicCart, allPlanetData } = useData();
+  const planet = allPlanetData.find((planet) => planet.planetId === Number(id));
+
   const ID = Number(id);
   const markRef = useRef<HTMLDivElement>(null);
   const [fixed, setFixed] = useState(false);
@@ -47,7 +51,7 @@ export default function ProductDescriptionPageComponent({ id }) {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.firstHeading}>The Kepler-442a</h1>
+      <h1 className={styles.firstHeading}>{planet?.planetName}</h1>
       <div>
         <FirstPart id={id} />
         <SecondPart id={ID} />

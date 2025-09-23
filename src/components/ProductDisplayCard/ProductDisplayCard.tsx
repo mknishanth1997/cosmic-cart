@@ -1,11 +1,10 @@
 "use client";
-import { Button, Tooltip } from "flowbite-react";
+import { Tooltip } from "flowbite-react";
 import ManyStyledButton from "../ManyStyledButton/ManyStyledButton";
 import styles from "./ProductDisplayCard.module.css";
 import { FaCartArrowDown } from "react-icons/fa";
 import Image from "next/image";
 import { FaHeart } from "react-icons/fa6";
-import { useState } from "react";
 import ShareSpeedDial from "@/Library/flow-bite/SpeedDial/ShareSpeedDial";
 import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
@@ -138,6 +137,7 @@ export function ProductDisplayCard({
                 className={`${styles.overlayButton} transition-transform duration-300 
     hover:scale-125 active:scale-95`}
               >
+                {""}
                 <FaHeart
                   size={18}
                   className={`transition-colors duration-300 ${

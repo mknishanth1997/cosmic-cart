@@ -1,5 +1,4 @@
 "use client";
-import ImageHolderWithTitle from "@/components/ImageHolderWithTitle/ImageHolderWithTitle";
 import { useData } from "@/context/dataContext";
 import React, { useState, useEffect } from "react";
 import ImageHolderWithTitle1 from "../ImageHolderWithTitle/ImageHolderWithTitle1";

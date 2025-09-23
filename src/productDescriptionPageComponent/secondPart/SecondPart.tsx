@@ -4,7 +4,6 @@ import { Thermometer, Sun, Globe } from "lucide-react";
 
 export default function SecondPart({ id }) {
   const { cosmicShop, saveCosmicCart, allPlanetData } = useData();
-  console.log(typeof id);
   const planet = allPlanetData.find((planet) => planet.planetId === id);
   return (
     <div className="flex justify-center ">

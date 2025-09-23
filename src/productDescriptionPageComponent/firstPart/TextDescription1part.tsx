@@ -197,7 +197,6 @@ export default function TextDescription1part({ id }) {
           >
             {isInWishList ? "Remove from wish" : "Add to Wish"}
           </ManyStyledButton>
-          ;
         </div>
       </div>
       <ImageModal
