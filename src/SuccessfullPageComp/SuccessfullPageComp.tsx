@@ -10,26 +10,69 @@ import { useSearchParams } from "next/navigation";
 import jsPDF from "jspdf";
 import HeroSectionToPitchPage from "./HeroSectionToPitchPage";
 const generatePDF = () => {
-  const doc = new jsPDF();
+  const doc = new jsPDF({ orientation: "landscape", unit: "pt", format: "a4" });
+  const pageWidth = doc.internal.pageSize.getWidth();
+  const pageHeight = doc.internal.pageSize.getHeight();
 
-  doc.setFontSize(22);
-  doc.text(" Space Program Certificate", 20, 30);
+  // ----- Background Gradient -----
+  // Note: jsPDF doesn't directly support gradients; we can simulate with colored rectangle
+  doc.setFillColor(10, 10, 40); // dark space blue
+  doc.rect(0, 0, pageWidth, pageHeight, "F");
 
-  doc.setFontSize(16);
-  doc.text("This is to certify that you now own:", 20, 50);
+  // ----- Border -----
+  doc.setDrawColor(255, 215, 0); // gold
+  doc.setLineWidth(4);
+  doc.rect(20, 20, pageWidth - 40, pageHeight - 40, "S");
 
+  // ----- Header -----
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(36);
+  doc.setTextColor(255, 223, 0); // golden title
+  doc.text("Galactic Planetary Ownership Certificate", pageWidth / 2, 80, {
+    align: "center",
+  });
+
+  // ----- Subtitle -----
   doc.setFontSize(18);
-  doc.text("Planet Kepler-22b", 20, 70);
-
-  doc.setFontSize(12);
+  doc.setTextColor(255, 255, 255);
+  doc.setFont("helvetica", "normal");
   doc.text(
-    "Thank you for your intergalactic purchase. Please contact your local space agency for travel arrangements.",
-    20,
-    90,
-    { maxWidth: 170 }
+    "This certifies that the following entity is the official owner of the interstellar body named:",
+    pageWidth / 2,
+    130,
+    { align: "center", maxWidth: pageWidth - 100 }
   );
 
-  doc.save("certificate.pdf");
+  // ----- Planet Name -----
+  doc.setFont("helvetica", "bolditalic");
+  doc.setFontSize(30);
+  doc.setTextColor(135, 206, 235); // planetary blue
+  doc.text("Planet Kepler-22b", pageWidth / 2, 180, { align: "center" });
+
+  // ----- Decorative separator -----
+  doc.setDrawColor(255, 223, 0);
+  doc.setLineWidth(1.5);
+  doc.line(80, 200, pageWidth - 80, 200);
+
+  // ----- Message -----
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(14);
+  doc.setTextColor(255, 255, 255);
+  doc.text(
+    "Thank you for your intergalactic purchase. Please retain this certificate as proof of ownership.\n\nTravel arrangements and visitation rights are subject to Galactic Authority regulations.",
+    pageWidth / 2,
+    230,
+    { align: "center", maxWidth: pageWidth - 100, lineHeightFactor: 1.4 }
+  );
+
+  // ----- Signature placeholders -----
+  doc.setFontSize(16);
+  doc.setTextColor(255, 223, 0);
+  doc.text("Authorized Galactic Officer", 100, pageHeight - 80);
+  doc.text("Purchaser Signature", pageWidth - 140, pageHeight - 80);
+
+  // ----- Save PDF -----
+  doc.save("Galactic_Planet_Certificate.pdf");
 };
 export default function SuccessfullPageComp() {
   const searchParams = useSearchParams();

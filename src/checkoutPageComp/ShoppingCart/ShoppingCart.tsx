@@ -1,5 +1,6 @@
 import { useData } from "@/context/dataContext";
 import style from "./ShoppingCart.module.css";
+import Image from "next/image";
 
 type Props = {
   id: string;
@@ -73,10 +74,12 @@ const ShoppingCart: React.FC<Props> = ({ id, input, setInput }) => {
                 <div key={planet.planetId} className={style.tableRow}>
                   <div className={style.productCell}>
                     <div className={style.productImage}>
-                      <img
+                      <Image
                         src={planet.planetThumbnailImg}
                         alt={planet.planetName}
-                        className="w-12 h-12 object-cover rounded"
+                        width={48} // ✅ small fixed size
+                        height={48}
+                        className="object-cover rounded"
                       />
                     </div>
                     <div>

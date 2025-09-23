@@ -1,7 +1,7 @@
 "use client";
-import ManyStyledButton from "@/components/ManyStyledButton/ManyStyledButton";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import Image from "next/image";
 
 const ImageSlider2ForThisComp = ({ autoSlide = true, interval = 3000 }) => {
   const slides = [
@@ -34,16 +34,23 @@ const ImageSlider2ForThisComp = ({ autoSlide = true, interval = 3000 }) => {
     }, interval);
     return () => clearInterval(timer);
   }, [autoSlide, interval, slides.length]);
+
   return (
     <div className="w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto p-4 sm:p-6 rounded-2xl shadow-xl bg-[linear-gradient(to_right,#581c87,#831843)] flex flex-col items-center">
-      {/* Image container */}
-      <Toaster></Toaster>
+      {/* Toaster */}
+      <Toaster />
 
+      {/* Image container */}
       <div className="relative w-full h-56 sm:h-64 md:h-80 lg:h-96 rounded-xl bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
-        <img
+        <Image
           src={slides[current].src}
           alt={slides[current].alt}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          loading="lazy" // lazy load for performance
+          quality={60} // smaller file size
+          priority={false} // low priority
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
         {/* Indicators */}
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 sm:space-x-2">
