@@ -26,7 +26,7 @@ const ImageSliderWithCheckoutButton = ({
     },
     {
       id: 2,
-      src: "/ps/headbang.gif",
+      src: "/ps/ps4.webp",
       alt: "Planet 2",
       text: "Wanna test how tough your wall is?",
     },
