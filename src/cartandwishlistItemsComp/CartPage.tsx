@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import CartAndWishComp from "./cartAndWishComp";
 import style from "./CartPage.module.css";

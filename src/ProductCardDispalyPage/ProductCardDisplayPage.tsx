@@ -1,3 +1,4 @@
+"use client";
 import ImageSlider from "@/components/ImageSlider/ImageSlider";
 import { ProductDisplayCard } from "@/components/ProductDisplayCard/ProductDisplayCard";
 import styles from "./ProductCardDisplayPage.module.css";

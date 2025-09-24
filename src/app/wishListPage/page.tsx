@@ -1,11 +1,13 @@
 "use client";
 import CartPage from "@/cartandwishlistItemsComp/CartPage";
-import React from "react";
+import React, { Suspense } from "react";
 
 export default function wishListPage() {
   return (
     <div>
-      <CartPage></CartPage>
+      <Suspense fallback={<div>Loading...</div>}>
+        <CartPage />
+      </Suspense>
     </div>
   );
 }

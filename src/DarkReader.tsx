@@ -1,8 +1,6 @@
-// components/GlobalDarkReader.tsx
 "use client";
 
 import { useEffect } from "react";
-import { enable as enableDarkReader } from "darkreader";
 
 export default function GlobalDarkReader({
   children,
@@ -10,10 +8,13 @@ export default function GlobalDarkReader({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    enableDarkReader({
-      //   brightness: 100,
-      //   contrast: 90,
-      //   sepia: 10,
+    // Import darkreader dynamically on client-side only
+    import("darkreader").then(({ enable }) => {
+      enable({
+        // brightness: 100,
+        // contrast: 90,
+        // sepia: 10,
+      });
     });
   }, []);
 

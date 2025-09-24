@@ -1,10 +1,13 @@
+"use client";
 import SuccessfullPageComp from "@/SuccessfullPageComp/SuccessfullPageComp";
-import React from "react";
+import React, { Suspense } from "react";
 
 export default function SuccessfullPage() {
   return (
     <div>
-      <SuccessfullPageComp></SuccessfullPageComp>
+      <Suspense fallback={<div>Loading...</div>}>
+        <SuccessfullPageComp />
+      </Suspense>
     </div>
   );
 }

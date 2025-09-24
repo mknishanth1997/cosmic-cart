@@ -1,3 +1,4 @@
+"use client";
 import { useData } from "@/context/dataContext";
 import style from "./cartandwishlistitemscomp.module.css";
 import ManyStyledButton from "@/components/ManyStyledButton/ManyStyledButton";
