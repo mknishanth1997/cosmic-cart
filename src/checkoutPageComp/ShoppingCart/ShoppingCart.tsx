@@ -88,7 +88,16 @@ const ShoppingCart: React.FC<Props> = ({ id, input, setInput }) => {
                       </div>
                     </div>
                   </div>
-                  <div className={style.priceCell}>₹{planet.planetPrice}</div>
+                  <div className={style.priceCell}>
+                    {planet?.planetPrice !== undefined
+                      ? new Intl.NumberFormat("en-IN", {
+                          style: "currency",
+                          currency: "INR",
+                          maximumFractionDigits: 0,
+                        }).format(planet.planetPrice)
+                      : "₹0"}
+                  </div>
+
                   <button
                     className={style.removeBtn}
                     onClick={() => handleRemove(planet.planetId)}
@@ -113,7 +122,15 @@ const ShoppingCart: React.FC<Props> = ({ id, input, setInput }) => {
 
             <div className={style.summaryRow}>
               <span>Subtotal:</span>
-              <span>{`₹${totalPrice}`}</span>
+              <span>
+                {totalPrice !== undefined
+                  ? new Intl.NumberFormat("en-IN", {
+                      style: "currency",
+                      currency: "INR",
+                      maximumFractionDigits: 0,
+                    }).format(totalPrice)
+                  : "₹0"}
+              </span>
             </div>
             <div className={style.summaryRow}>
               <span>Shipping:</span>
@@ -121,7 +138,15 @@ const ShoppingCart: React.FC<Props> = ({ id, input, setInput }) => {
             </div>
             <div className={style.totalRow}>
               <span>Total:</span>
-              <span>{`₹${totalPrice}`}</span>
+              <span>
+                {totalPrice !== undefined
+                  ? new Intl.NumberFormat("en-IN", {
+                      style: "currency",
+                      currency: "INR",
+                      maximumFractionDigits: 0,
+                    }).format(totalPrice)
+                  : "₹0"}
+              </span>
             </div>
           </div>
         </>

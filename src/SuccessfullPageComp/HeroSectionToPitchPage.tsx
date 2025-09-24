@@ -38,7 +38,7 @@ export default function HeroSection() {
     >
       {/* overlays: make bg slightly lighter so planet shows through */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black opacity-25" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent" />
       </div>
 

@@ -93,8 +93,14 @@ export default function TextDescription1part({ id }) {
         {/* Price & Delivery Badge */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
           <span className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-            {`Rs ${planet?.planetPrice}`}
+            {planet?.planetPrice !== undefined
+              ? new Intl.NumberFormat("en-IN", {
+                  style: "currency",
+                  currency: "INR",
+                }).format(planet.planetPrice)
+              : "Rs 0"}
           </span>
+
           <div className="flex items-center gap-2">
             <span className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-400">
               Deliver in:
@@ -202,7 +208,7 @@ export default function TextDescription1part({ id }) {
       <ImageModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        imageSrc="/earthisalreadyowned.webp"
+        imageSrc="/public/"
         imageAlt="Planet Preview"
       />
     </div>

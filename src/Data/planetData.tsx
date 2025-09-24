@@ -33,7 +33,8 @@ export const planetData: Planets = [
     planetShortDescription:
       "Inhabited by 7 billion hostile, territorial creatures called humans. The only species that pays to live on their own planet. There’s a reason it’s free.",
     planetTitleDescription: "Not just a planet—an actual nightmare.",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "Inhabited by extremely territorial, invading, hostile species. Comes with free wars, rent payments for land you technically already own.Prone to natural disasters, political instability, and the occasional human who still thinks it’s flat. Air and water included, but supplies are running out fast.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
@@ -49,26 +50,27 @@ export const planetData: Planets = [
         "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Comes with highly innovative managers who believe nine women can make a baby in one month.",
+        "Offers a premium subscription service for breathing (oxygen not included).",
+        "Ashamed of nothing, offended by everything.",
+        "Home of the genius species that invented nuclear weapons… and then pointed them at themselves.",
+        "A retirement plan where you work until your 60s and still die broke.",
       ],
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Bountiful Resources",
+          para: "Earth comes preloaded with a wide array of natural resources: water, air, soil, rocks, and more. Sure, some of it is unevenly distributed, but who doesn’t love a little challenge in resource allocation?",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Human Ingenuity",
+          para: "This planet’s inhabitants have mastered the art of turning everything into a product: forests into furniture, oceans into shipping lanes, and, of course, their own labor into a never-ending cycle of overwork and taxation. Efficiency at its finest!",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: " Exploitation of Earth to Extinction level Potential",
+          para: "For the ambitious and morally flexible, Earth offers unlimited potential to extract, consume, and destroy. If you’re erick enough to ignore ethics, you can exploit this planet right down to extinction—match its resources to your greed and call it innovation.",
         },
       ],
+
       images: [
         {
           url: "/descriptiveImg/Earth/Product/product1.webp",
@@ -79,13 +81,13 @@ export const planetData: Planets = [
         { url: "/descriptiveImg/Earth/Product/product3.webp" },
       ],
       surfacePreviewImages: [
-        "/фото загрязнённого воздуха и воды.webp",
-        "/mi.webp",
+        "/descriptiveImg/Earth/surfacepreview/fc.webp",
+        "/descriptiveImg/Earth/surfacepreview/sp.webp",
         "/surfacePreview/surfacePreview3.webp",
       ],
     },
     planetGallery: [
-      "/descriptiveImg/Earth/Banners/5520909.jpg",
+      "/descriptiveImg/Earth/Banners/banner6.webp",
       "/descriptiveImg/Earth/Banners/banner5.webp",
       "/descriptiveImg/Earth/Banners/banner4.webp",
       "/descriptiveImg/Earth/Banners/banner3.webp",
@@ -2309,14 +2311,16 @@ export const planetData: Planets = [
   },
 ];
 
-planetData.forEach((planet) => {
+planetData.forEach((planet, index) => {
+  if (index === 0) return; // skip first
   planet.planetGallery = [];
 
   for (let i = 0; i < 5; i++) {
     planet.planetGallery.push(banners[bannerIndex]);
-    bannerIndex = (bannerIndex + 1) % banners.length; // loop back to 0 if we reach the end
+    bannerIndex = (bannerIndex + 1) % banners.length;
   }
 });
+
 planetData.forEach((planet, idx) => {
   if (idx < 2) return; // skip first 2 planets
 
