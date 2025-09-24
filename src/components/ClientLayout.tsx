@@ -9,15 +9,16 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex">
+    <div className="flex overflow-hidden">
       {/* Sidebar */}
       <SidebarFlowBite
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        className="z-30" // ensures it is above headers
+        className="z-30"
       />
 
-      <div className="flex-1 flex flex-col relative z-0">
+      {/* Main content area */}
+      <div className="flex-1 flex flex-col relative z-0 overflow-hidden">
         {/* Sticky headers */}
         <div className="sticky top-0 z-20 flex flex-col">
           <Header onToggle={() => setIsOpen((prev) => !prev)} />

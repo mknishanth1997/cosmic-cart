@@ -2,43 +2,46 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { extractBlogsKeys } from "@/Data/blogsRawData";
+import { SidebarFlowBite } from "@/Library/flow-bite/SideBar/SideBar";
+import { Header } from "@/ProductCardDispalyPage/Header/Header1";
+
+const blogTitles = [
+  "Mars: The Celestial Wonder",
+  "Venus: Hellishly Hot but Gorgeous",
+];
 
 export function SecondaryHeader() {
   const [isVisible, setIsVisible] = useState(true);
-  const [isMounted, setIsMounted] = useState(false); // for animation
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Trigger animation after mount
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  useEffect(() => setIsMounted(true), []);
 
   if (!isVisible) return null;
 
   return (
     <div
       className={`bg-gray-100 dark:bg-gray-700 px-2 py-1 shadow-sm flex items-center justify-between
-      transition-all duration-500 ease-out
-      ${isMounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
+        transition-all duration-500 ease-out
+        ${
+          isMounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+        }`}
     >
-      {/* Scrollable blog links */}
-      <div className="flex gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
-        {extractBlogsKeys().map((key) => (
-          <Link
-            key={key}
-            href={`/blogs/${key}`}
-            className="text-gray-800 dark:text-gray-200 hover:text-cyan-600 dark:hover:text-cyan-400 text-[14px] font-medium flex-shrink-0 transition-colors duration-200"
-          >
-            {key}
-          </Link>
-        ))}
-
-        <Link href="/productDescriptionPage/1">
-          <span>Product Description page</span>
-        </Link>
+      {/* Scrollable links container */}
+      <div className="flex-1 max-w-full overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent hover:scrollbar-thumb-gray-600">
+        <div className="flex gap-4 min-w-[max-content]">
+          {blogTitles.map((title, index) => (
+            <Link
+              key={index}
+              href={`/blogs/${title.replace(/\s+/g, "-").toLowerCase()}`}
+              className="text-gray-800 dark:text-gray-200 hover:text-cyan-600 dark:hover:text-cyan-400 text-[14px] font-medium flex-shrink-0 whitespace-nowrap transition-colors duration-200"
+            >
+              {title}
+            </Link>
+          ))}
+        </div>
       </div>
 
-      {/* Dismiss button */}
+      {/* Close button */}
       <button
         onClick={() => setIsVisible(false)}
         className="ml-4 p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
@@ -48,4 +51,16 @@ export function SecondaryHeader() {
       </button>
     </div>
   );
+}
+
+{
+  /* {extractBlogsKeys().map((key) => (
+          <Link
+            key={key}
+            href={`/blogs/${key}`}
+            className="text-gray-800 dark:text-gray-200 hover:text-cyan-600 dark:hover:text-cyan-400 text-[14px] font-medium flex-shrink-0 transition-colors duration-200"
+          >
+            {key}
+          </Link>
+        ))} */
 }
