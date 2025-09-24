@@ -37,7 +37,7 @@ export const planetData: Planets = [
       "Inhabited by extremely territorial, invading, hostile species. Comes with free wars, rent payments for land you technically already own.Prone to natural disasters, political instability, and the occasional human who still thinks it’s flat. Air and water included, but supplies are running out fast.",
     planetRarity: "Rare",
     planetStars: 5,
-    deliveryIn: 3,
+    deliveryIn: 0,
     planetOfferDetails: {
       hasOffer: true,
       offerPrice: 100,
@@ -132,7 +132,8 @@ export const planetData: Planets = [
     planetShortDescription:
       "2.5 million light years away. If you won’t visit Andromeda, it’ll visit you—just stay alive for 5 million light years.",
     planetTitleDescription: "She's coming for us, fast. 120 km/s.",
-    planetInnterDescription: "lorem",
+    planetInnterDescription:
+      "A sprawling galaxy full of uncharted stars and cosmic mysteries. Beware rogue black holes, untested wormholes, and the occasional space debris on a collision course. Perfect for explorers—air is included, Wi-Fi not guaranteed.",
     planetRarity: "Rare",
     planetStars: 3,
     deliveryIn: 3,
@@ -148,26 +149,28 @@ export const planetData: Planets = [
         "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Atmosphere: Rarefied and slightly glowing, perfect for thrill-seekers and light-breathers.",
+        "Moons: Three, mischievously named 'Blink,' 'Twirl,' and 'Shimmer,' which change positions unpredictably.",
+        "Gravity: 0.9 G, lighter than Earth but enough to feel grounded.",
+        "Known for: The Cosmic Vortexes and the Radiant Crystal Plains.",
+        "Local Flora: Floating 'Starblossoms' and 'Nebula Ferns' that hum softly at night.",
       ],
+
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Cosmic Wonders",
+          para: "Andromeda boasts breathtaking celestial phenomena at every turn. From shimmering nebulae to streaks of cosmic dust, your eyes will never be bored here.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Danger & Adventure",
+          para: "The galaxy comes with rogue black holes, unexpected meteor showers, and gravity quirks that keep even experienced explorers on their toes.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Exploit at Your Own Risk",
+          para: "If you’re daring—or reckless—you can harvest exotic minerals and rare flora, though beware: overdoing it might turn Andromeda into a cosmic wasteland.",
         },
       ],
+
       images: [
         {
           url: "/planet/planet19.webp",
@@ -228,8 +231,9 @@ export const planetData: Planets = [
     planetPrice: 15000,
     planetShortDescription:
       "Get hold of the thing that holds the universe together. Darker than your ex. Delivered in a biodegradable, totally-not-apocalyptic paper bag.",
-    planetTitleDescription: "Not just a planet, a new begining",
-    planetInnterDescription: "lorem",
+    planetTitleDescription: "Not just matter, dark matter.",
+    planetInnterDescription:
+      "Invisible, untouchable, and mysteriously everywhere yet nowhere. Dark Matter won’t bother you, but it keeps the universe from falling apart—so don’t upset it.",
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
@@ -244,25 +248,27 @@ export const planetData: Planets = [
         "Kepler-442b is an ecological marvel, with a dense, interconnected canopy that filters out the harsh light of its binary suns, creating a perpetual twilight on the forest floor. The planet's ecosystem is a symphony of life, where every organism plays a crucial role in maintaining its delicate balance.",
         "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
       ],
+
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Atmosphere: Non-existent, perfect for introverts and theoretical physicists.",
+        "Moons: Zero. Why bother? It’s invisible anyway.",
+        "Gravity: Extremely low, but mysteriously influential on everything around it.",
+        "Known for: Holding galaxies together and ruining every physics beginner’s life.",
+        "Local Flora: Non-applicable. It’s mostly spooky nothingness.",
       ],
+
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Mysterious Nature",
+          para: "Dark Matter is the ultimate cosmic prank. You can’t see it, touch it, or measure it directly, but it quietly shapes the fate of galaxies.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Danger & Adventure",
+          para: "Venturing near it is safe… if you’re a ghost. Scientists are still figuring out if interacting with it could lead to catastrophic existential crises.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Exploit at Your Own Risk",
+          para: "If you’re bold—or just very reckless—you might attempt to harness Dark Matter. Spoiler: even the bravest have only theoretical success. Overuse might destabilize nearby galaxies.",
         },
       ],
       images: [
@@ -326,8 +332,10 @@ export const planetData: Planets = [
     planetPrice: 15000,
     planetShortDescription:
       "Sun: About 15 million degrees hot. Perfect for cooking and all your energy needs. If it’s too hot to land, just land at night.",
-    planetTitleDescription: "Not just a planet, a new begining",
-    planetInnterDescription: "lorem",
+    planetTitleDescription: "I'm White. I'm Hot. I am the Sun.",
+    planetInnterDescription:
+      "A massive ball of fire that’s been running hot for billions of years. Comes with endless light, extreme heat, and occasional solar tantrums.",
+
     planetRarity: "Rare",
     planetStars: 5,
     deliveryIn: 3,
@@ -343,24 +351,25 @@ export const planetData: Planets = [
         "The air is thick with the scent of exotic blossoms, and the ground hums with the soft vibrations of unseen creatures. Navigating Kepler-442b is an adventure in itself, with hidden caves, cascading waterfalls, and ancient, towering trees that reach for the sky.",
       ],
       bulletPoints: [
-        "Atmosphere: Breathable, with a high concentration of exotic pollens.",
-        "Moons: Two, named 'Luna' and 'Selene,' which cast an ethereal glow during the night.",
-        "Gravity: 1.1 G, slightly heavier than Earth.",
-        "Known for: The Great Luminescent Forest and the Whisperfalls.",
-        "Local Flora: Includes the 'Glimmerpetal' and the 'Sun-eater' vines.",
+        "Atmosphere: Plasma soup, mostly hydrogen and helium. Not for breathing.",
+        "Moons: None. It’s the center of attention anyway.",
+        "Gravity: Ridiculously strong, keeps planets in line—or fries them if they wander too close.",
+        "Known for: Rising and setting every day, making mornings unavoidable.",
+        "Local Flora: Non-applicable. Only flaming glory here.",
       ],
+
       detailedDescription: [
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Blazing Majesty",
+          para: "The Sun doesn’t mess around. It provides life-giving light and energy, but approach too closely and you’ll be instantly incinerated.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Temperamental Star",
+          para: "Solar flares and sunspots are the Sun’s way of showing personality. It’s unpredictable, fiery, and impossible to ignore.",
         },
         {
-          title: "Heading",
-          para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo rerum eaque quam, sit pariatur facilis, itaque reprehenderit aspernatur sed repellendus necessitatibus, repudiandae inventore omnis aliquam ipsam saepe dolore quae.",
+          title: "Exploit at Your Own Risk",
+          para: "If you think you can harness its power, remember: overexposure will literally vaporize you. But hey, unlimited solar energy for the brave—or stupid.",
         },
       ],
       images: [
@@ -2346,4 +2355,13 @@ planetData.forEach((planet, idx) => {
   surfIndex = (surfIndex % planetSurfCount) + 1;
 
   planet.planetDescription.images = images;
+});
+
+// Stars
+planetData.slice(1).forEach((planet) => {
+  // Random planetStars between 1 and 4
+  planet.planetStars = Math.floor(Math.random() * 4) + 1;
+
+  // Random deliveryIn between 0 and 99
+  planet.deliveryIn = Math.floor(Math.random() * 100);
 });
