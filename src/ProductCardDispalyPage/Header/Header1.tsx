@@ -96,14 +96,14 @@ export function Header({ onToggle }: { onToggle: () => void }) {
             <button className="relative p-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700">
               <HiOutlineHeart className="h-6 w-6" />
               <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1">
-                2
+                {cosmicShop.wishListItems.length}
               </span>
             </button>
 
             <button className="relative p-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700">
               <HiOutlineShoppingCart className="h-6 w-6" />
               <span className="absolute -top-1 -right-1 bg-cyan-500 text-white text-xs rounded-full px-1">
-                3
+                {cosmicShop.cartItems.length}
               </span>
             </button>
           </div>
