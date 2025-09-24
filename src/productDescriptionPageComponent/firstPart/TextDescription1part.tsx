@@ -208,7 +208,7 @@ export default function TextDescription1part({ id }) {
       <ImageModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        imageSrc="/public/"
+        imageSrc="/earthisalreadyowned.webp"
         imageAlt="Planet Preview"
       />
     </div>
