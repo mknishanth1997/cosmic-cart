@@ -11,10 +11,9 @@ const desktopImages = [
 ];
 
 const mobileImages = [
-  "/heroBanner/herobannermain1.webp",
-  "/heroBanner/herobannermain2.webp",
-  "/heroBanner/herobannermain3.webp",
-  "/heroBanner/herobanner3.webp",
+  "/mobilepic3.webp",
+  "/mobilepic1.webp",
+  "/mobilepic2.webp",
 ];
 
 export default function ImageSlider() {
